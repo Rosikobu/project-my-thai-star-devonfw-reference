@@ -1,0 +1,81 @@
+<div class="float-container">
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <h5>{{'userManagement.createUser' | transloco}}</h5>
+    <p>
+      <mat-form-field class="matField" appearance="outline">
+        <mat-label>{{'formFields.username' | transloco}}</mat-label>
+        <input matInput formControlName="username">
+        <mat-icon matSuffix>person_outline</mat-icon>
+        <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+          <div *ngIf="username.errors.required">
+            {{'userManagement.formErrors.addUserNameRequired' | transloco}}
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="matField" appearance="outline">
+        <mat-label>{{'formFields.email' | transloco}}</mat-label>
+        <input matInput formControlName="email">
+        <mat-icon matSuffix> email</mat-icon>
+        <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+          <div *ngIf="email.errors.required">
+            {{'userManagement.formErrors.addUserEmailRequired' | transloco}}
+          </div>
+          <div *ngIf="email.errors.pattern">
+            {{'userManagement.formErrors.addUserEmailPattern' | transloco}}
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="matField" appearance="outline">
+        <mat-label>{{'formFields.password' | transloco}}</mat-label>
+        <input type="password" matInput formControlName="password" [type]="fieldTextType ? 'text' : 'password'">
+        <mat-icon matSuffix (click)="toggleFieldTextType()"><span class="material-icons-outlined">
+            {{icon}}
+          </span></mat-icon>
+        <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+          <div *ngIf="password.errors.required">
+            {{'userManagement.formErrors.passwordRequiredPrompt' | transloco}}
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="matField" appearance="outline">
+        <mat-label>{{'userManagement.userManagement.repeatPassword' | transloco}}</mat-label>
+        <input type="confirmedPassword" matInput formControlName="confirmedPassword"
+          [type]="fieldTextType ? 'text' : 'password'">
+        <mat-icon matSuffix (click)="toggleFieldTextType()"><span class="material-icons-outlined">
+            {{icon}}
+          </span></mat-icon>
+        <mat-error *ngIf="form.confirmedPassword.touched && form.confirmedPassword.invalid">
+          <div *ngIf="form.confirmedPassword.errors.required">{{'userManagement.formErrors.passwordRequiredPrompt' |
+            transloco}}</div>
+          <div *ngIf="form.confirmedPassword.errors.confirmedValidator">{{'userManagement.formErrors.passwordMatchPrompt' |
+            transloco}}</div>
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="matField" appearance="outline">
+        <mat-label>{{'userManagement.userRole' | transloco}}</mat-label>
+        <mat-select formControlName="userRoleId">
+          <mat-option value="0">{{'userManagement.roleCustomer' | transloco}}</mat-option>
+          <mat-option value="1">{{'userManagement.roleWaiter' | transloco}}</mat-option>
+          <mat-option value="2">{{'userManagement.roleManager' | transloco}}</mat-option>
+          <mat-option value="3">{{'userManagement.roleAdmin' | transloco}}</mat-option>
+        </mat-select>
+        <mat-icon matSuffix>account_circle</mat-icon>
+      </mat-form-field>
+    </p>
+    <div class="btn-toolbar">
+      <div class="right-btn">
+        <button mat-button mat-dialog-close type="submit" color="accent"
+          [disabled]="!checkoutForm.valid">{{'buttons.addUser' | transloco}}</button>
+        <button mat-button mat-dialog-close color="primary">{{'buttons.close' | transloco}}</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,67 @@
+pipeline {
+    agent any
+    parameters {
+        choice(name:'APP_MANAGEMENT', choices: ['Deploy', 'Terminate'], description: 'Deploy or terminate the application?')
+    }
+    options {
+        buildDiscarder(logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '1', daysToKeepStr: '5', numToKeepStr: '50'))
+        // Disable concurrent builds. It will wait until the pipeline finish before start a new one
+        disableConcurrentBuilds()
+    }
+
+    environment {
+        angularDir = 'angular'
+        javaDir = 'java'
+        KUBECONFIG= "/tmp/${env.JOB_NAME}/config"
+    }
+
+    stages {
+        
+        stage ('Build Angular image') {
+            steps {
+                script {
+                    docker.build("harbor.demo.xpaas.io/my-thai-star/mts-angular:latest", "-f angular/Dockerfile.k8s angular")
+                }
+            }
+        }
+        
+        stage ('Build Java image') {
+            steps {
+                script {
+                    docker.build("harbor.demo.xpaas.io/my-thai-star/mts-java:latest", "-f java/Dockerfile.k8s java")
+                }
+            }
+        }
+        
+        stage ('Push Docker images to Harbor') {
+            steps {
+                script {
+                    docker.withRegistry('https://harbor.demo.xpaas.io/', 'harbor-my-thai-star') {
+                        sh 'docker push harbor.demo.xpaas.io/my-thai-star/mts-angular:latest'
+                        sh 'docker push harbor.demo.xpaas.io/my-thai-star/mts-java:latest'
+                    }
+                }
+            }
+        }
+        
+        stage ('Deploy/Terminate MTS') {
+            steps {
+                script {
+                    def command;
+
+                    if (params.APP_MANAGEMENT == 'Deploy') {
+                        command = "cd jenkins/nKaaS && kubectl apply -f angular-app.yaml -f java-app.yaml -f ingress.yaml"
+                    }
+
+                    if (params.APP_MANAGEMENT == "Terminate") {
+                        command = "kubectl delete deployment,svc,ingress java angular"
+                    }
+
+                    withKubeConfig([credentialsId: 'kube-my-thai-star', serverUrl: 'https://k8s.demo.xpaas.io:6443', namespace: 'my-thai-star']) {
+                        sh "${command}"
+                    }
+                }
+            }
+        }
+    }
+}

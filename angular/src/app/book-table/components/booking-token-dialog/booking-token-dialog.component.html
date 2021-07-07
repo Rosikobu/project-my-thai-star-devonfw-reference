@@ -1,0 +1,16 @@
+
+<span mat-dialog-title>{{'bookTable.dialog.bookingSuccess' | transloco}}</span>
+
+<mat-dialog-content>
+    <div>{{'bookTable.dialog.bookingId' | transloco}}:</div>
+    <span class="tokenDialog" matTooltip="{{'bookTable.dialog.bookingIdTooltip' | transloco}}" matTooltipClass="matTooltip">{{bookingToken}}</span>
+    <button class="clipBoardButton" mat-button [cdkCopyToClipboard]="bookingToken">{{'buttons.copyBookingId' | transloco}}</button>
+    <mat-divider></mat-divider>
+</mat-dialog-content>
+
+
+<mat-dialog-actions>
+      <button mat-button mat-dialog-close>
+        {{'buttons.close' | transloco}}
+      </button>
+    </mat-dialog-actions>

@@ -1,0 +1,3026 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my thai star",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "CreateBookingIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "auf {name}",
+                "auf den Namen {name}",
+                "{name}"
+              ]
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "{time} {date}",
+                "am {date} um {time}",
+                "am {date}",
+                "{date} {time}",
+                "{date} um {time}",
+                "{time} am {date}",
+                "um {time} am {date}",
+                "{date}"
+              ]
+            },
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "um {time}",
+                "{time}"
+              ]
+            },
+            {
+              "name": "assistants",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "die Buchung ist für {assistants}",
+                "die Buchung ist für {assistants} Person",
+                "die Buchung ist für {assistants} Personen",
+                "für {assistants} Personen",
+                "für {assistants} Person",
+                "für {assistants}",
+                "{assistants} Personen",
+                "{assistants} Person",
+                "{assistants}"
+              ]
+            }
+          ],
+          "samples": [
+            "bitte buche einen Tisch für {assistants} Personen {date}",
+            "bitte buche einen Tisch für {assistants} Personen {date} um {time}",
+            "bitte buche einen Tisch für {assistants} Personen um {time} {date}",
+            "bitte buche einen Tisch für {assistants} {date}",
+            "bitte buche einen Tisch für {assistants} {date} um {time}",
+            "bitte buche einen Tisch für {assistants} um {time} {date}",
+            "bitte buche einen Tisch {date}",
+            "bitte buche einen Tisch {date} für {assistants}",
+            "bitte buche einen Tisch {date} für {assistants} Personen",
+            "bitte buche einen Tisch {date} um {time}",
+            "bitte buche einen Tisch {date} um {time} für {assistants}",
+            "bitte buche einen Tisch {date} um {time} für {assistants} Personen",
+            "bitte buche einen Tisch um {time} {date}",
+            "bitte buche {date} einen Tisch",
+            "bitte buche {date} einen Tisch für {assistants}",
+            "bitte buche {date} einen Tisch für {assistants} Personen",
+            "bitte buche {date} einen Tisch für {assistants} Personen um {time}",
+            "bitte buche {date} einen Tisch für {assistants} um {time}",
+            "bitte buche {date} einen Tisch um {time}",
+            "bitte buche {date} einen Tisch um {time} für {assistants}",
+            "bitte buche {date} einen Tisch um {time} für {assistants} Personen",
+            "bitte buche {date} um {time} einen Tisch",
+            "bitte buche {date} um {time} einen Tisch für {assistants}",
+            "bitte buche {date} um {time} einen Tisch für {assistants} Personen",
+            "bitte buche um {time} einen Tisch für {assistants} Personen {date}",
+            "bitte buche um {time} einen Tisch für {assistants} {date}",
+            "bitte buche um {time} einen Tisch {date}",
+            "bitte buche um {time} {date} einen Tisch",
+            "bitte buche um {time} {date} einen Tisch für {assistants}",
+            "bitte buche um {time} {date} einen Tisch für {assistants} Personen",
+            "buche einen Tisch für {assistants} Personen {date}",
+            "buche einen Tisch für {assistants} Personen {date} um {time}",
+            "buche einen Tisch für {assistants} Personen um {time} {date}",
+            "buche einen Tisch für {assistants} {date}",
+            "buche einen Tisch für {assistants} {date} um {time}",
+            "buche einen Tisch für {assistants} um {time} {date}",
+            "buche einen Tisch {date}",
+            "buche einen Tisch {date} für {assistants}",
+            "buche einen Tisch {date} für {assistants} Personen",
+            "buche einen Tisch {date} um {time}",
+            "buche einen Tisch {date} um {time} für {assistants}",
+            "buche einen Tisch {date} um {time} für {assistants} Personen",
+            "buche einen Tisch um {time} {date}",
+            "buche {date} einen Tisch",
+            "buche {date} einen Tisch für {assistants}",
+            "buche {date} einen Tisch für {assistants} Personen",
+            "buche {date} einen Tisch für {assistants} Personen um {time}",
+            "buche {date} einen Tisch für {assistants} um {time}",
+            "buche {date} einen Tisch um {time}",
+            "buche {date} einen Tisch um {time} für {assistants}",
+            "buche {date} einen Tisch um {time} für {assistants} Personen",
+            "buche {date} um {time} einen Tisch",
+            "buche {date} um {time} einen Tisch für {assistants}",
+            "buche {date} um {time} einen Tisch für {assistants} Personen",
+            "buche um {time} einen Tisch für {assistants} Personen {date}",
+            "buche um {time} einen Tisch für {assistants} {date}",
+            "buche um {time} einen Tisch {date}",
+            "buche um {time} {date} einen Tisch",
+            "buche um {time} {date} einen Tisch für {assistants}",
+            "buche um {time} {date} einen Tisch für {assistants} Personen",
+            "bitte tätige eine Buchung für {assistants} Personen {date}",
+            "bitte tätige eine Buchung für {assistants} Personen {date} um {time}",
+            "bitte tätige eine Buchung für {assistants} Personen um {time} {date}",
+            "bitte tätige eine Buchung für {assistants} {date}",
+            "bitte tätige eine Buchung für {assistants} {date} um {time}",
+            "bitte tätige eine Buchung für {assistants} um {time} {date}",
+            "bitte tätige eine Buchung {date}",
+            "bitte tätige eine Buchung {date} für {assistants}",
+            "bitte tätige eine Buchung {date} für {assistants} Personen",
+            "bitte tätige eine Buchung {date} um {time}",
+            "bitte tätige eine Buchung {date} um {time} für {assistants}",
+            "bitte tätige eine Buchung {date} um {time} für {assistants} Personen",
+            "bitte tätige eine Buchung um {time} {date}",
+            "bitte tätige {date} eine Buchung",
+            "bitte tätige {date} eine Buchung für {assistants}",
+            "bitte tätige {date} eine Buchung für {assistants} Personen",
+            "bitte tätige {date} eine Buchung für {assistants} Personen um {time}",
+            "bitte tätige {date} eine Buchung für {assistants} um {time}",
+            "bitte tätige {date} eine Buchung um {time}",
+            "bitte tätige {date} eine Buchung um {time} für {assistants}",
+            "bitte tätige {date} eine Buchung um {time} für {assistants} Personen",
+            "bitte tätige {date} um {time} eine Buchung",
+            "bitte tätige {date} um {time} eine Buchung für {assistants}",
+            "bitte tätige {date} um {time} eine Buchung für {assistants} Personen",
+            "bitte tätige um {time} eine Buchung für {assistants} Personen {date}",
+            "bitte tätige um {time} eine Buchung für {assistants} {date}",
+            "bitte tätige um {time} eine Buchung {date}",
+            "bitte tätige um {time} {date} eine Buchung",
+            "bitte tätige um {time} {date} eine Buchung für {assistants}",
+            "bitte tätige um {time} {date} eine Buchung für {assistants} Personen",
+            "tätige eine Buchung für {assistants} Personen {date}",
+            "tätige eine Buchung für {assistants} Personen {date} um {time}",
+            "tätige eine Buchung für {assistants} Personen um {time} {date}",
+            "tätige eine Buchung für {assistants} {date}",
+            "tätige eine Buchung für {assistants} {date} um {time}",
+            "tätige eine Buchung für {assistants} um {time} {date}",
+            "tätige eine Buchung {date}",
+            "tätige eine Buchung {date} für {assistants}",
+            "tätige eine Buchung {date} für {assistants} Personen",
+            "tätige eine Buchung {date} um {time}",
+            "tätige eine Buchung {date} um {time} für {assistants}",
+            "tätige eine Buchung {date} um {time} für {assistants} Personen",
+            "tätige eine Buchung um {time} {date}",
+            "tätige {date} eine Buchung",
+            "tätige {date} eine Buchung für {assistants}",
+            "tätige {date} eine Buchung für {assistants} Personen",
+            "tätige {date} eine Buchung für {assistants} Personen um {time}",
+            "tätige {date} eine Buchung für {assistants} um {time}",
+            "tätige {date} eine Buchung um {time}",
+            "tätige {date} eine Buchung um {time} für {assistants}",
+            "tätige {date} eine Buchung um {time} für {assistants} Personen",
+            "tätige {date} um {time} eine Buchung",
+            "tätige {date} um {time} eine Buchung für {assistants}",
+            "tätige {date} um {time} eine Buchung für {assistants} Personen",
+            "tätige um {time} eine Buchung für {assistants} Personen {date}",
+            "tätige um {time} eine Buchung für {assistants} {date}",
+            "tätige um {time} eine Buchung {date}",
+            "tätige um {time} {date} eine Buchung",
+            "tätige um {time} {date} eine Buchung für {assistants}",
+            "tätige um {time} {date} eine Buchung für {assistants} Personen",
+            "bitte tätige eine Reservierung für {assistants} Personen {date}",
+            "bitte tätige eine Reservierung für {assistants} Personen {date} um {time}",
+            "bitte tätige eine Reservierung für {assistants} Personen um {time} {date}",
+            "bitte tätige eine Reservierung für {assistants} {date}",
+            "bitte tätige eine Reservierung für {assistants} {date} um {time}",
+            "bitte tätige eine Reservierung für {assistants} um {time} {date}",
+            "bitte tätige eine Reservierung {date}",
+            "bitte tätige eine Reservierung {date} für {assistants}",
+            "bitte tätige eine Reservierung {date} für {assistants} Personen",
+            "bitte tätige eine Reservierung {date} um {time}",
+            "bitte tätige eine Reservierung {date} um {time} für {assistants}",
+            "bitte tätige eine Reservierung {date} um {time} für {assistants} Personen",
+            "bitte tätige eine Reservierung um {time} {date}",
+            "bitte tätige {date} eine Reservierung",
+            "bitte tätige {date} eine Reservierung für {assistants}",
+            "bitte tätige {date} eine Reservierung für {assistants} Personen",
+            "bitte tätige {date} eine Reservierung für {assistants} Personen um {time}",
+            "bitte tätige {date} eine Reservierung für {assistants} um {time}",
+            "bitte tätige {date} eine Reservierung um {time}",
+            "bitte tätige {date} eine Reservierung um {time} für {assistants}",
+            "bitte tätige {date} eine Reservierung um {time} für {assistants} Personen",
+            "bitte tätige {date} um {time} eine Reservierung",
+            "bitte tätige {date} um {time} eine Reservierung für {assistants}",
+            "bitte tätige {date} um {time} eine Reservierung für {assistants} Personen",
+            "bitte tätige um {time} eine Reservierung für {assistants} Personen {date}",
+            "bitte tätige um {time} eine Reservierung für {assistants} {date}",
+            "bitte tätige um {time} eine Reservierung {date}",
+            "bitte tätige um {time} {date} eine Reservierung",
+            "bitte tätige um {time} {date} eine Reservierung für {assistants}",
+            "bitte tätige um {time} {date} eine Reservierung für {assistants} Personen",
+            "tätige eine Reservierung für {assistants} Personen {date}",
+            "tätige eine Reservierung für {assistants} Personen {date} um {time}",
+            "tätige eine Reservierung für {assistants} Personen um {time} {date}",
+            "tätige eine Reservierung für {assistants} {date}",
+            "tätige eine Reservierung für {assistants} {date} um {time}",
+            "tätige eine Reservierung für {assistants} um {time} {date}",
+            "tätige eine Reservierung {date}",
+            "tätige eine Reservierung {date} für {assistants}",
+            "tätige eine Reservierung {date} für {assistants} Personen",
+            "tätige eine Reservierung {date} um {time}",
+            "tätige eine Reservierung {date} um {time} für {assistants}",
+            "tätige eine Reservierung {date} um {time} für {assistants} Personen",
+            "tätige eine Reservierung um {time} {date}",
+            "tätige {date} eine Reservierung",
+            "tätige {date} eine Reservierung für {assistants}",
+            "tätige {date} eine Reservierung für {assistants} Personen",
+            "tätige {date} eine Reservierung für {assistants} Personen um {time}",
+            "tätige {date} eine Reservierung für {assistants} um {time}",
+            "tätige {date} eine Reservierung um {time}",
+            "tätige {date} eine Reservierung um {time} für {assistants}",
+            "tätige {date} eine Reservierung um {time} für {assistants} Personen",
+            "tätige {date} um {time} eine Reservierung",
+            "tätige {date} um {time} eine Reservierung für {assistants}",
+            "tätige {date} um {time} eine Reservierung für {assistants} Personen",
+            "tätige um {time} eine Reservierung für {assistants} Personen {date}",
+            "tätige um {time} eine Reservierung für {assistants} {date}",
+            "tätige um {time} eine Reservierung {date}",
+            "tätige um {time} {date} eine Reservierung",
+            "tätige um {time} {date} eine Reservierung für {assistants}",
+            "tätige um {time} {date} eine Reservierung für {assistants} Personen",
+            "bitte mach eine Reservierung für {assistants} Personen {date}",
+            "bitte mach eine Reservierung für {assistants} Personen {date} um {time}",
+            "bitte mach eine Reservierung für {assistants} Personen um {time} {date}",
+            "bitte mach eine Reservierung für {assistants} {date}",
+            "bitte mach eine Reservierung für {assistants} {date} um {time}",
+            "bitte mach eine Reservierung für {assistants} um {time} {date}",
+            "bitte mach eine Reservierung {date}",
+            "bitte mach eine Reservierung {date} für {assistants}",
+            "bitte mach eine Reservierung {date} für {assistants} Personen",
+            "bitte mach eine Reservierung {date} um {time}",
+            "bitte mach eine Reservierung {date} um {time} für {assistants}",
+            "bitte mach eine Reservierung {date} um {time} für {assistants} Personen",
+            "bitte mach eine Reservierung um {time} {date}",
+            "bitte mach {date} eine Reservierung",
+            "bitte mach {date} eine Reservierung für {assistants}",
+            "bitte mach {date} eine Reservierung für {assistants} Personen",
+            "bitte mach {date} eine Reservierung für {assistants} Personen um {time}",
+            "bitte mach {date} eine Reservierung für {assistants} um {time}",
+            "bitte mach {date} eine Reservierung um {time}",
+            "bitte mach {date} eine Reservierung um {time} für {assistants}",
+            "bitte mach {date} eine Reservierung um {time} für {assistants} Personen",
+            "bitte mach {date} um {time} eine Reservierung",
+            "bitte mach {date} um {time} eine Reservierung für {assistants}",
+            "bitte mach {date} um {time} eine Reservierung für {assistants} Personen",
+            "bitte mach um {time} eine Reservierung für {assistants} Personen {date}",
+            "bitte mach um {time} eine Reservierung für {assistants} {date}",
+            "bitte mach um {time} eine Reservierung {date}",
+            "bitte mach um {time} {date} eine Reservierung",
+            "bitte mach um {time} {date} eine Reservierung für {assistants}",
+            "bitte mach um {time} {date} eine Reservierung für {assistants} Personen",
+            "mach eine Reservierung für {assistants} Personen {date}",
+            "mach eine Reservierung für {assistants} Personen {date} um {time}",
+            "mach eine Reservierung für {assistants} Personen um {time} {date}",
+            "mach eine Reservierung für {assistants} {date}",
+            "mach eine Reservierung für {assistants} {date} um {time}",
+            "mach eine Reservierung für {assistants} um {time} {date}",
+            "mach eine Reservierung {date}",
+            "mach eine Reservierung {date} für {assistants}",
+            "mach eine Reservierung {date} für {assistants} Personen",
+            "mach eine Reservierung {date} um {time}",
+            "mach eine Reservierung {date} um {time} für {assistants}",
+            "mach eine Reservierung {date} um {time} für {assistants} Personen",
+            "mach eine Reservierung um {time} {date}",
+            "mach {date} eine Reservierung",
+            "mach {date} eine Reservierung für {assistants}",
+            "mach {date} eine Reservierung für {assistants} Personen",
+            "mach {date} eine Reservierung für {assistants} Personen um {time}",
+            "mach {date} eine Reservierung für {assistants} um {time}",
+            "mach {date} eine Reservierung um {time}",
+            "mach {date} eine Reservierung um {time} für {assistants}",
+            "mach {date} eine Reservierung um {time} für {assistants} Personen",
+            "mach {date} um {time} eine Reservierung",
+            "mach {date} um {time} eine Reservierung für {assistants}",
+            "mach {date} um {time} eine Reservierung für {assistants} Personen",
+            "mach um {time} eine Reservierung für {assistants} Personen {date}",
+            "mach um {time} eine Reservierung für {assistants} {date}",
+            "mach um {time} eine Reservierung {date}",
+            "mach um {time} {date} eine Reservierung",
+            "mach um {time} {date} eine Reservierung für {assistants}",
+            "mach um {time} {date} eine Reservierung für {assistants} Personen",
+            "bitte mach eine Buchung für {assistants} Personen {date}",
+            "bitte mach eine Buchung für {assistants} Personen {date} um {time}",
+            "bitte mach eine Buchung für {assistants} Personen um {time} {date}",
+            "bitte mach eine Buchung für {assistants} {date}",
+            "bitte mach eine Buchung für {assistants} {date} um {time}",
+            "bitte mach eine Buchung für {assistants} um {time} {date}",
+            "bitte mach eine Buchung {date}",
+            "bitte mach eine Buchung {date} für {assistants}",
+            "bitte mach eine Buchung {date} für {assistants} Personen",
+            "bitte mach eine Buchung {date} um {time}",
+            "bitte mach eine Buchung {date} um {time} für {assistants}",
+            "bitte mach eine Buchung {date} um {time} für {assistants} Personen",
+            "bitte mach eine Buchung um {time} {date}",
+            "bitte mach {date} eine Buchung",
+            "bitte mach {date} eine Buchung für {assistants}",
+            "bitte mach {date} eine Buchung für {assistants} Personen",
+            "bitte mach {date} eine Buchung für {assistants} Personen um {time}",
+            "bitte mach {date} eine Buchung für {assistants} um {time}",
+            "bitte mach {date} eine Buchung um {time}",
+            "bitte mach {date} eine Buchung um {time} für {assistants}",
+            "bitte mach {date} eine Buchung um {time} für {assistants} Personen",
+            "bitte mach {date} um {time} eine Buchung",
+            "bitte mach {date} um {time} eine Buchung für {assistants}",
+            "bitte mach {date} um {time} eine Buchung für {assistants} Personen",
+            "bitte mach um {time} eine Buchung für {assistants} Personen {date}",
+            "bitte mach um {time} eine Buchung für {assistants} {date}",
+            "bitte mach um {time} eine Buchung {date}",
+            "bitte mach um {time} {date} eine Buchung",
+            "bitte mach um {time} {date} eine Buchung für {assistants}",
+            "bitte mach um {time} {date} eine Buchung für {assistants} Personen",
+            "mach eine Buchung für {assistants} Personen {date}",
+            "mach eine Buchung für {assistants} Personen {date} um {time}",
+            "mach eine Buchung für {assistants} Personen um {time} {date}",
+            "mach eine Buchung für {assistants} {date}",
+            "mach eine Buchung für {assistants} {date} um {time}",
+            "mach eine Buchung für {assistants} um {time} {date}",
+            "mach eine Buchung {date}",
+            "mach eine Buchung {date} für {assistants}",
+            "mach eine Buchung {date} für {assistants} Personen",
+            "mach eine Buchung {date} um {time}",
+            "mach eine Buchung {date} um {time} für {assistants}",
+            "mach eine Buchung {date} um {time} für {assistants} Personen",
+            "mach eine Buchung um {time} {date}",
+            "mach {date} eine Buchung",
+            "mach {date} eine Buchung für {assistants}",
+            "mach {date} eine Buchung für {assistants} Personen",
+            "mach {date} eine Buchung für {assistants} Personen um {time}",
+            "mach {date} eine Buchung für {assistants} um {time}",
+            "mach {date} eine Buchung um {time}",
+            "mach {date} eine Buchung um {time} für {assistants}",
+            "mach {date} eine Buchung um {time} für {assistants} Personen",
+            "mach {date} um {time} eine Buchung",
+            "mach {date} um {time} eine Buchung für {assistants}",
+            "mach {date} um {time} eine Buchung für {assistants} Personen",
+            "mach um {time} eine Buchung für {assistants} Personen {date}",
+            "mach um {time} eine Buchung für {assistants} {date}",
+            "mach um {time} eine Buchung {date}",
+            "mach um {time} {date} eine Buchung",
+            "mach um {time} {date} eine Buchung für {assistants}",
+            "mach um {time} {date} eine Buchung für {assistants} Personen",
+            "bitte reserviere einen Tisch für {assistants} Personen {date}",
+            "bitte reserviere einen Tisch für {assistants} Personen {date} um {time}",
+            "bitte reserviere einen Tisch für {assistants} Personen um {time} {date}",
+            "bitte reserviere einen Tisch für {assistants} {date}",
+            "bitte reserviere einen Tisch für {assistants} {date} um {time}",
+            "bitte reserviere einen Tisch für {assistants} um {time} {date}",
+            "bitte reserviere einen Tisch {date}",
+            "bitte reserviere einen Tisch {date} für {assistants}",
+            "bitte reserviere einen Tisch {date} für {assistants} Personen",
+            "bitte reserviere einen Tisch {date} um {time}",
+            "bitte reserviere einen Tisch {date} um {time} für {assistants}",
+            "bitte reserviere einen Tisch {date} um {time} für {assistants} Personen",
+            "bitte reserviere einen Tisch um {time} {date}",
+            "bitte reserviere {date} einen Tisch",
+            "bitte reserviere {date} einen Tisch für {assistants}",
+            "bitte reserviere {date} einen Tisch für {assistants} Personen",
+            "bitte reserviere {date} einen Tisch für {assistants} Personen um {time}",
+            "bitte reserviere {date} einen Tisch für {assistants} um {time}",
+            "bitte reserviere {date} einen Tisch um {time}",
+            "bitte reserviere {date} einen Tisch um {time} für {assistants}",
+            "bitte reserviere {date} einen Tisch um {time} für {assistants} Personen",
+            "bitte reserviere {date} um {time} einen Tisch",
+            "bitte reserviere {date} um {time} einen Tisch für {assistants}",
+            "bitte reserviere {date} um {time} einen Tisch für {assistants} Personen",
+            "bitte reserviere um {time} einen Tisch für {assistants} Personen {date}",
+            "bitte reserviere um {time} einen Tisch für {assistants} {date}",
+            "bitte reserviere um {time} einen Tisch {date}",
+            "bitte reserviere um {time} {date} einen Tisch",
+            "bitte reserviere um {time} {date} einen Tisch für {assistants}",
+            "bitte reserviere um {time} {date} einen Tisch für {assistants} Personen",
+            "reserviere einen Tisch für {assistants} Personen {date}",
+            "reserviere einen Tisch für {assistants} Personen {date} um {time}",
+            "reserviere einen Tisch für {assistants} Personen um {time} {date}",
+            "reserviere einen Tisch für {assistants} {date}",
+            "reserviere einen Tisch für {assistants} {date} um {time}",
+            "reserviere einen Tisch für {assistants} um {time} {date}",
+            "reserviere einen Tisch {date}",
+            "reserviere einen Tisch {date} für {assistants}",
+            "reserviere einen Tisch {date} für {assistants} Personen",
+            "reserviere einen Tisch {date} um {time}",
+            "reserviere einen Tisch {date} um {time} für {assistants}",
+            "reserviere einen Tisch {date} um {time} für {assistants} Personen",
+            "reserviere einen Tisch um {time} {date}",
+            "reserviere {date} einen Tisch",
+            "reserviere {date} einen Tisch für {assistants}",
+            "reserviere {date} einen Tisch für {assistants} Personen",
+            "reserviere {date} einen Tisch für {assistants} Personen um {time}",
+            "reserviere {date} einen Tisch für {assistants} um {time}",
+            "reserviere {date} einen Tisch um {time}",
+            "reserviere {date} einen Tisch um {time} für {assistants}",
+            "reserviere {date} einen Tisch um {time} für {assistants} Personen",
+            "reserviere {date} um {time} einen Tisch",
+            "reserviere {date} um {time} einen Tisch für {assistants}",
+            "reserviere {date} um {time} einen Tisch für {assistants} Personen",
+            "reserviere um {time} einen Tisch für {assistants} Personen {date}",
+            "reserviere um {time} einen Tisch für {assistants} {date}",
+            "reserviere um {time} einen Tisch {date}",
+            "reserviere um {time} {date} einen Tisch",
+            "reserviere um {time} {date} einen Tisch für {assistants}",
+            "reserviere um {time} {date} einen Tisch für {assistants} Personen",
+            "ich möchte einen Tisch für {assistants} Personen {date} buchen",
+            "ich möchte einen Tisch für {assistants} Personen {date} um {time} buchen",
+            "ich möchte einen Tisch für {assistants} Personen um {time} {date} buchen",
+            "ich möchte einen Tisch für {assistants} {date} buchen",
+            "ich möchte einen Tisch für {assistants} {date} um {time} buchen",
+            "ich möchte einen Tisch für {assistants} um {time} {date} buchen",
+            "ich möchte einen Tisch {date} buchen",
+            "ich möchte einen Tisch {date} für {assistants} buchen",
+            "ich möchte einen Tisch {date} für {assistants} Personen buchen",
+            "ich möchte einen Tisch {date} um {time} buchen",
+            "ich möchte einen Tisch {date} um {time} für {assistants} buchen",
+            "ich möchte einen Tisch {date} um {time} für {assistants} Personen buchen",
+            "ich möchte einen Tisch um {time} {date} buchen",
+            "ich möchte {date} einen Tisch buchen",
+            "ich möchte {date} einen Tisch für {assistants} buchen",
+            "ich möchte {date} einen Tisch für {assistants} Personen buchen",
+            "ich möchte {date} einen Tisch für {assistants} Personen um {time} buchen",
+            "ich möchte {date} einen Tisch für {assistants} um {time} buchen",
+            "ich möchte {date} einen Tisch um {time} buchen",
+            "ich möchte {date} einen Tisch um {time} für {assistants} buchen",
+            "ich möchte {date} einen Tisch um {time} für {assistants} Personen buchen",
+            "ich möchte {date} um {time} einen Tisch buchen",
+            "ich möchte {date} um {time} einen Tisch für {assistants} buchen",
+            "ich möchte {date} um {time} einen Tisch für {assistants} Personen buchen",
+            "ich möchte um {time} einen Tisch für {assistants} Personen {date} buchen",
+            "ich möchte um {time} einen Tisch für {assistants} {date} buchen",
+            "ich möchte um {time} einen Tisch {date} buchen",
+            "ich möchte um {time} {date} einen Tisch buchen",
+            "ich möchte um {time} {date} einen Tisch für {assistants} buchen",
+            "ich möchte um {time} {date} einen Tisch für {assistants} Personen buchen",
+            "ich will einen Tisch für {assistants} Personen {date} buchen",
+            "ich will einen Tisch für {assistants} Personen {date} um {time} buchen",
+            "ich will einen Tisch für {assistants} Personen um {time} {date} buchen",
+            "ich will einen Tisch für {assistants} {date} buchen",
+            "ich will einen Tisch für {assistants} {date} um {time} buchen",
+            "ich will einen Tisch für {assistants} um {time} {date} buchen",
+            "ich will einen Tisch {date} buchen",
+            "ich will einen Tisch {date} für {assistants} buchen",
+            "ich will einen Tisch {date} für {assistants} Personen buchen",
+            "ich will einen Tisch {date} um {time} buchen",
+            "ich will einen Tisch {date} um {time} für {assistants} buchen",
+            "ich will einen Tisch {date} um {time} für {assistants} Personen buchen",
+            "ich will einen Tisch um {time} {date} buchen",
+            "ich will {date} einen Tisch buchen",
+            "ich will {date} einen Tisch für {assistants} buchen",
+            "ich will {date} einen Tisch für {assistants} Personen buchen",
+            "ich will {date} einen Tisch für {assistants} Personen um {time} buchen",
+            "ich will {date} einen Tisch für {assistants} um {time} buchen",
+            "ich will {date} einen Tisch um {time} buchen",
+            "ich will {date} einen Tisch um {time} für {assistants} buchen",
+            "ich will {date} einen Tisch um {time} für {assistants} Personen buchen",
+            "ich will {date} um {time} einen Tisch buchen",
+            "ich will {date} um {time} einen Tisch für {assistants} buchen",
+            "ich will {date} um {time} einen Tisch für {assistants} Personen buchen",
+            "ich will um {time} einen Tisch für {assistants} Personen {date} buchen",
+            "ich will um {time} einen Tisch für {assistants} {date} buchen",
+            "ich will um {time} einen Tisch {date} buchen",
+            "ich will um {time} {date} einen Tisch buchen",
+            "ich will um {time} {date} einen Tisch für {assistants} buchen",
+            "ich will um {time} {date} einen Tisch für {assistants} Personen buchen",
+            "ich möchte einen Tisch für {assistants} Personen {date} reservieren",
+            "ich möchte einen Tisch für {assistants} Personen {date} um {time} reservieren",
+            "ich möchte einen Tisch für {assistants} Personen um {time} {date} reservieren",
+            "ich möchte einen Tisch für {assistants} {date} reservieren",
+            "ich möchte einen Tisch für {assistants} {date} um {time} reservieren",
+            "ich möchte einen Tisch für {assistants} um {time} {date} reservieren",
+            "ich möchte einen Tisch {date} reservieren",
+            "ich möchte einen Tisch {date} für {assistants} reservieren",
+            "ich möchte einen Tisch {date} für {assistants} Personen reservieren",
+            "ich möchte einen Tisch {date} um {time} reservieren",
+            "ich möchte einen Tisch {date} um {time} für {assistants} reservieren",
+            "ich möchte einen Tisch {date} um {time} für {assistants} Personen reservieren",
+            "ich möchte einen Tisch um {time} {date} reservieren",
+            "ich möchte {date} einen Tisch reservieren",
+            "ich möchte {date} einen Tisch für {assistants} reservieren",
+            "ich möchte {date} einen Tisch für {assistants} Personen reservieren",
+            "ich möchte {date} einen Tisch für {assistants} Personen um {time} reservieren",
+            "ich möchte {date} einen Tisch für {assistants} um {time} reservieren",
+            "ich möchte {date} einen Tisch um {time} reservieren",
+            "ich möchte {date} einen Tisch um {time} für {assistants} reservieren",
+            "ich möchte {date} einen Tisch um {time} für {assistants} Personen reservieren",
+            "ich möchte {date} um {time} einen Tisch reservieren",
+            "ich möchte {date} um {time} einen Tisch für {assistants} reservieren",
+            "ich möchte {date} um {time} einen Tisch für {assistants} Personen reservieren",
+            "ich möchte um {time} einen Tisch für {assistants} Personen {date} reservieren",
+            "ich möchte um {time} einen Tisch für {assistants} {date} reservieren",
+            "ich möchte um {time} einen Tisch {date} reservieren",
+            "ich möchte um {time} {date} einen Tisch reservieren",
+            "ich möchte um {time} {date} einen Tisch für {assistants} reservieren",
+            "ich möchte um {time} {date} einen Tisch für {assistants} Personen reservieren",
+            "ich will einen Tisch für {assistants} Personen {date} reservieren",
+            "ich will einen Tisch für {assistants} Personen {date} um {time} reservieren",
+            "ich will einen Tisch für {assistants} Personen um {time} {date} reservieren",
+            "ich will einen Tisch für {assistants} {date} reservieren",
+            "ich will einen Tisch für {assistants} {date} um {time} reservieren",
+            "ich will einen Tisch für {assistants} um {time} {date} reservieren",
+            "ich will einen Tisch {date} reservieren",
+            "ich will einen Tisch {date} für {assistants} reservieren",
+            "ich will einen Tisch {date} für {assistants} Personen reservieren",
+            "ich will einen Tisch {date} um {time} reservieren",
+            "ich will einen Tisch {date} um {time} für {assistants} reservieren",
+            "ich will einen Tisch {date} um {time} für {assistants} Personen reservieren",
+            "ich will einen Tisch um {time} {date} reservieren",
+            "ich will {date} einen Tisch reservieren",
+            "ich will {date} einen Tisch für {assistants} reservieren",
+            "ich will {date} einen Tisch für {assistants} Personen reservieren",
+            "ich will {date} einen Tisch für {assistants} Personen um {time} reservieren",
+            "ich will {date} einen Tisch für {assistants} um {time} reservieren",
+            "ich will {date} einen Tisch um {time} reservieren",
+            "ich will {date} einen Tisch um {time} für {assistants} reservieren",
+            "ich will {date} einen Tisch um {time} für {assistants} Personen reservieren",
+            "ich will {date} um {time} einen Tisch reservieren",
+            "ich will {date} um {time} einen Tisch für {assistants} reservieren",
+            "ich will {date} um {time} einen Tisch für {assistants} Personen reservieren",
+            "ich will um {time} einen Tisch für {assistants} Personen {date} reservieren",
+            "ich will um {time} einen Tisch für {assistants} {date} reservieren",
+            "ich will um {time} einen Tisch {date} reservieren",
+            "ich will um {time} {date} einen Tisch reservieren",
+            "ich will um {time} {date} einen Tisch für {assistants} reservieren",
+            "ich will um {time} {date} einen Tisch für {assistants} Personen reservieren",
+            "ich möchte eine Buchung für {assistants} Personen {date} tätigen",
+            "ich möchte eine Buchung für {assistants} Personen {date} um {time} tätigen",
+            "ich möchte eine Buchung für {assistants} Personen um {time} {date} tätigen",
+            "ich möchte eine Buchung für {assistants} {date} tätigen",
+            "ich möchte eine Buchung für {assistants} {date} um {time} tätigen",
+            "ich möchte eine Buchung für {assistants} um {time} {date} tätigen",
+            "ich möchte eine Buchung {date} tätigen",
+            "ich möchte eine Buchung {date} für {assistants} tätigen",
+            "ich möchte eine Buchung {date} für {assistants} Personen tätigen",
+            "ich möchte eine Buchung {date} um {time} tätigen",
+            "ich möchte eine Buchung {date} um {time} für {assistants} tätigen",
+            "ich möchte eine Buchung {date} um {time} für {assistants} Personen tätigen",
+            "ich möchte eine Buchung um {time} {date} tätigen",
+            "ich möchte {date} eine Buchung tätigen",
+            "ich möchte {date} eine Buchung für {assistants} tätigen",
+            "ich möchte {date} eine Buchung für {assistants} Personen tätigen",
+            "ich möchte {date} eine Buchung für {assistants} Personen um {time} tätigen",
+            "ich möchte {date} eine Buchung für {assistants} um {time} tätigen",
+            "ich möchte {date} eine Buchung um {time} tätigen",
+            "ich möchte {date} eine Buchung um {time} für {assistants} tätigen",
+            "ich möchte {date} eine Buchung um {time} für {assistants} Personen tätigen",
+            "ich möchte {date} um {time} eine Buchung tätigen",
+            "ich möchte {date} um {time} eine Buchung für {assistants} tätigen",
+            "ich möchte {date} um {time} eine Buchung für {assistants} Personen tätigen",
+            "ich möchte um {time} eine Buchung für {assistants} Personen {date} tätigen",
+            "ich möchte um {time} eine Buchung für {assistants} {date} tätigen",
+            "ich möchte um {time} eine Buchung {date} tätigen",
+            "ich möchte um {time} {date} eine Buchung tätigen",
+            "ich möchte um {time} {date} eine Buchung für {assistants} tätigen",
+            "ich möchte um {time} {date} eine Buchung für {assistants} Personen tätigen",
+            "ich will eine Buchung für {assistants} Personen {date} tätigen",
+            "ich will eine Buchung für {assistants} Personen {date} um {time} tätigen",
+            "ich will eine Buchung für {assistants} Personen um {time} {date} tätigen",
+            "ich will eine Buchung für {assistants} {date} tätigen",
+            "ich will eine Buchung für {assistants} {date} um {time} tätigen",
+            "ich will eine Buchung für {assistants} um {time} {date} tätigen",
+            "ich will eine Buchung {date} tätigen",
+            "ich will eine Buchung {date} für {assistants} tätigen",
+            "ich will eine Buchung {date} für {assistants} Personen tätigen",
+            "ich will eine Buchung {date} um {time} tätigen",
+            "ich will eine Buchung {date} um {time} für {assistants} tätigen",
+            "ich will eine Buchung {date} um {time} für {assistants} Personen tätigen",
+            "ich will eine Buchung um {time} {date} tätigen",
+            "ich will {date} eine Buchung tätigen",
+            "ich will {date} eine Buchung für {assistants} tätigen",
+            "ich will {date} eine Buchung für {assistants} Personen tätigen",
+            "ich will {date} eine Buchung für {assistants} Personen um {time} tätigen",
+            "ich will {date} eine Buchung für {assistants} um {time} tätigen",
+            "ich will {date} eine Buchung um {time} tätigen",
+            "ich will {date} eine Buchung um {time} für {assistants} tätigen",
+            "ich will {date} eine Buchung um {time} für {assistants} Personen tätigen",
+            "ich will {date} um {time} eine Buchung tätigen",
+            "ich will {date} um {time} eine Buchung für {assistants} tätigen",
+            "ich will {date} um {time} eine Buchung für {assistants} Personen tätigen",
+            "ich will um {time} eine Buchung für {assistants} Personen {date} tätigen",
+            "ich will um {time} eine Buchung für {assistants} {date} tätigen",
+            "ich will um {time} eine Buchung {date} tätigen",
+            "ich will um {time} {date} eine Buchung tätigen",
+            "ich will um {time} {date} eine Buchung für {assistants} tätigen",
+            "ich will um {time} {date} eine Buchung für {assistants} Personen tätigen",
+            "ich möchte eine Buchung für {assistants} Personen {date} machen",
+            "ich möchte eine Buchung für {assistants} Personen {date} um {time} machen",
+            "ich möchte eine Buchung für {assistants} Personen um {time} {date} machen",
+            "ich möchte eine Buchung für {assistants} {date} machen",
+            "ich möchte eine Buchung für {assistants} {date} um {time} machen",
+            "ich möchte eine Buchung für {assistants} um {time} {date} machen",
+            "ich möchte eine Buchung {date} machen",
+            "ich möchte eine Buchung {date} für {assistants} machen",
+            "ich möchte eine Buchung {date} für {assistants} Personen machen",
+            "ich möchte eine Buchung {date} um {time} machen",
+            "ich möchte eine Buchung {date} um {time} für {assistants} machen",
+            "ich möchte eine Buchung {date} um {time} für {assistants} Personen machen",
+            "ich möchte eine Buchung um {time} {date} machen",
+            "ich möchte {date} eine Buchung machen",
+            "ich möchte {date} eine Buchung für {assistants} machen",
+            "ich möchte {date} eine Buchung für {assistants} Personen machen",
+            "ich möchte {date} eine Buchung für {assistants} Personen um {time} machen",
+            "ich möchte {date} eine Buchung für {assistants} um {time} machen",
+            "ich möchte {date} eine Buchung um {time} machen",
+            "ich möchte {date} eine Buchung um {time} für {assistants} machen",
+            "ich möchte {date} eine Buchung um {time} für {assistants} Personen machen",
+            "ich möchte {date} um {time} eine Buchung machen",
+            "ich möchte {date} um {time} eine Buchung für {assistants} machen",
+            "ich möchte {date} um {time} eine Buchung für {assistants} Personen machen",
+            "ich möchte um {time} eine Buchung für {assistants} Personen {date} machen",
+            "ich möchte um {time} eine Buchung für {assistants} {date} machen",
+            "ich möchte um {time} eine Buchung {date} machen",
+            "ich möchte um {time} {date} eine Buchung machen",
+            "ich möchte um {time} {date} eine Buchung für {assistants} machen",
+            "ich möchte um {time} {date} eine Buchung für {assistants} Personen machen",
+            "ich will eine Buchung für {assistants} Personen {date} machen",
+            "ich will eine Buchung für {assistants} Personen {date} um {time} machen",
+            "ich will eine Buchung für {assistants} Personen um {time} {date} machen",
+            "ich will eine Buchung für {assistants} {date} machen",
+            "ich will eine Buchung für {assistants} {date} um {time} machen",
+            "ich will eine Buchung für {assistants} um {time} {date} machen",
+            "ich will eine Buchung {date} machen",
+            "ich will eine Buchung {date} für {assistants} machen",
+            "ich will eine Buchung {date} für {assistants} Personen machen",
+            "ich will eine Buchung {date} um {time} machen",
+            "ich will eine Buchung {date} um {time} für {assistants} machen",
+            "ich will eine Buchung {date} um {time} für {assistants} Personen machen",
+            "ich will eine Buchung um {time} {date} machen",
+            "ich will {date} eine Buchung machen",
+            "ich will {date} eine Buchung für {assistants} machen",
+            "ich will {date} eine Buchung für {assistants} Personen machen",
+            "ich will {date} eine Buchung für {assistants} Personen um {time} machen",
+            "ich will {date} eine Buchung für {assistants} um {time} machen",
+            "ich will {date} eine Buchung um {time} machen",
+            "ich will {date} eine Buchung um {time} für {assistants} machen",
+            "ich will {date} eine Buchung um {time} für {assistants} Personen machen",
+            "ich will {date} um {time} eine Buchung machen",
+            "ich will {date} um {time} eine Buchung für {assistants} machen",
+            "ich will {date} um {time} eine Buchung für {assistants} Personen machen",
+            "ich will um {time} eine Buchung für {assistants} Personen {date} machen",
+            "ich will um {time} eine Buchung für {assistants} {date} machen",
+            "ich will um {time} eine Buchung {date} machen",
+            "ich will um {time} {date} eine Buchung machen",
+            "ich will um {time} {date} eine Buchung für {assistants} machen",
+            "ich will um {time} {date} eine Buchung für {assistants} Personen machen",
+            "ich möchte eine Reservieren für {assistants} Personen {date} machen",
+            "ich möchte eine Reservieren für {assistants} Personen {date} um {time} machen",
+            "ich möchte eine Reservieren für {assistants} Personen um {time} {date} machen",
+            "ich möchte eine Reservieren für {assistants} {date} machen",
+            "ich möchte eine Reservieren für {assistants} {date} um {time} machen",
+            "ich möchte eine Reservieren für {assistants} um {time} {date} machen",
+            "ich möchte eine Reservieren {date} machen",
+            "ich möchte eine Reservieren {date} für {assistants} machen",
+            "ich möchte eine Reservieren {date} für {assistants} Personen machen",
+            "ich möchte eine Reservieren {date} um {time} machen",
+            "ich möchte eine Reservieren {date} um {time} für {assistants} machen",
+            "ich möchte eine Reservieren {date} um {time} für {assistants} Personen machen",
+            "ich möchte eine Reservieren um {time} {date} machen",
+            "ich möchte {date} eine Reservieren machen",
+            "ich möchte {date} eine Reservieren für {assistants} machen",
+            "ich möchte {date} eine Reservieren für {assistants} Personen machen",
+            "ich möchte {date} eine Reservieren für {assistants} Personen um {time} machen",
+            "ich möchte {date} eine Reservieren für {assistants} um {time} machen",
+            "ich möchte {date} eine Reservieren um {time} machen",
+            "ich möchte {date} eine Reservieren um {time} für {assistants} machen",
+            "ich möchte {date} eine Reservieren um {time} für {assistants} Personen machen",
+            "ich möchte {date} um {time} eine Reservieren machen",
+            "ich möchte {date} um {time} eine Reservieren für {assistants} machen",
+            "ich möchte {date} um {time} eine Reservieren für {assistants} Personen machen",
+            "ich möchte um {time} eine Reservieren für {assistants} Personen {date} machen",
+            "ich möchte um {time} eine Reservieren für {assistants} {date} machen",
+            "ich möchte um {time} eine Reservieren {date} machen",
+            "ich möchte um {time} {date} eine Reservieren machen",
+            "ich möchte um {time} {date} eine Reservieren für {assistants} machen",
+            "ich möchte um {time} {date} eine Reservieren für {assistants} Personen machen",
+            "ich will eine Reservieren für {assistants} Personen {date} machen",
+            "ich will eine Reservieren für {assistants} Personen {date} um {time} machen",
+            "ich will eine Reservieren für {assistants} Personen um {time} {date} machen",
+            "ich will eine Reservieren für {assistants} {date} machen",
+            "ich will eine Reservieren für {assistants} {date} um {time} machen",
+            "ich will eine Reservieren für {assistants} um {time} {date} machen",
+            "ich will eine Reservieren {date} machen",
+            "ich will eine Reservieren {date} für {assistants} machen",
+            "ich will eine Reservieren {date} für {assistants} Personen machen",
+            "ich will eine Reservieren {date} um {time} machen",
+            "ich will eine Reservieren {date} um {time} für {assistants} machen",
+            "ich will eine Reservieren {date} um {time} für {assistants} Personen machen",
+            "ich will eine Reservieren um {time} {date} machen",
+            "ich will {date} eine Reservieren machen",
+            "ich will {date} eine Reservieren für {assistants} machen",
+            "ich will {date} eine Reservieren für {assistants} Personen machen",
+            "ich will {date} eine Reservieren für {assistants} Personen um {time} machen",
+            "ich will {date} eine Reservieren für {assistants} um {time} machen",
+            "ich will {date} eine Reservieren um {time} machen",
+            "ich will {date} eine Reservieren um {time} für {assistants} machen",
+            "ich will {date} eine Reservieren um {time} für {assistants} Personen machen",
+            "ich will {date} um {time} eine Reservieren machen",
+            "ich will {date} um {time} eine Reservieren für {assistants} machen",
+            "ich will {date} um {time} eine Reservieren für {assistants} Personen machen",
+            "ich will um {time} eine Reservieren für {assistants} Personen {date} machen",
+            "ich will um {time} eine Reservieren für {assistants} {date} machen",
+            "ich will um {time} eine Reservieren {date} machen",
+            "ich will um {time} {date} eine Reservieren machen",
+            "ich will um {time} {date} eine Reservieren für {assistants} machen",
+            "ich will um {time} {date} eine Reservieren für {assistants} Personen machen",
+            "ich möchte eine Reservieren für {assistants} Personen {date} tätigen",
+            "ich möchte eine Reservieren für {assistants} Personen {date} um {time} tätigen",
+            "ich möchte eine Reservieren für {assistants} Personen um {time} {date} tätigen",
+            "ich möchte eine Reservieren für {assistants} {date} tätigen",
+            "ich möchte eine Reservieren für {assistants} {date} um {time} tätigen",
+            "ich möchte eine Reservieren für {assistants} um {time} {date} tätigen",
+            "ich möchte eine Reservieren {date} tätigen",
+            "ich möchte eine Reservieren {date} für {assistants} tätigen",
+            "ich möchte eine Reservieren {date} für {assistants} Personen tätigen",
+            "ich möchte eine Reservieren {date} um {time} tätigen",
+            "ich möchte eine Reservieren {date} um {time} für {assistants} tätigen",
+            "ich möchte eine Reservieren {date} um {time} für {assistants} Personen tätigen",
+            "ich möchte eine Reservieren um {time} {date} tätigen",
+            "ich möchte {date} eine Reservieren tätigen",
+            "ich möchte {date} eine Reservieren für {assistants} tätigen",
+            "ich möchte {date} eine Reservieren für {assistants} Personen tätigen",
+            "ich möchte {date} eine Reservieren für {assistants} Personen um {time} tätigen",
+            "ich möchte {date} eine Reservieren für {assistants} um {time} tätigen",
+            "ich möchte {date} eine Reservieren um {time} tätigen",
+            "ich möchte {date} eine Reservieren um {time} für {assistants} tätigen",
+            "ich möchte {date} eine Reservieren um {time} für {assistants} Personen tätigen",
+            "ich möchte {date} um {time} eine Reservieren tätigen",
+            "ich möchte {date} um {time} eine Reservieren für {assistants} tätigen",
+            "ich möchte {date} um {time} eine Reservieren für {assistants} Personen tätigen",
+            "ich möchte um {time} eine Reservieren für {assistants} Personen {date} tätigen",
+            "ich möchte um {time} eine Reservieren für {assistants} {date} tätigen",
+            "ich möchte um {time} eine Reservieren {date} tätigen",
+            "ich möchte um {time} {date} eine Reservieren tätigen",
+            "ich möchte um {time} {date} eine Reservieren für {assistants} tätigen",
+            "ich möchte um {time} {date} eine Reservieren für {assistants} Personen tätigen",
+            "ich will eine Reservieren für {assistants} Personen {date} tätigen",
+            "ich will eine Reservieren für {assistants} Personen {date} um {time} tätigen",
+            "ich will eine Reservieren für {assistants} Personen um {time} {date} tätigen",
+            "ich will eine Reservieren für {assistants} {date} tätigen",
+            "ich will eine Reservieren für {assistants} {date} um {time} tätigen",
+            "ich will eine Reservieren für {assistants} um {time} {date} tätigen",
+            "ich will eine Reservieren {date} tätigen",
+            "ich will eine Reservieren {date} für {assistants} tätigen",
+            "ich will eine Reservieren {date} für {assistants} Personen tätigen",
+            "ich will eine Reservieren {date} um {time} tätigen",
+            "ich will eine Reservieren {date} um {time} für {assistants} tätigen",
+            "ich will eine Reservieren {date} um {time} für {assistants} Personen tätigen",
+            "ich will eine Reservieren um {time} {date} tätigen",
+            "ich will {date} eine Reservieren tätigen",
+            "ich will {date} eine Reservieren für {assistants} tätigen",
+            "ich will {date} eine Reservieren für {assistants} Personen tätigen",
+            "ich will {date} eine Reservieren für {assistants} Personen um {time} tätigen",
+            "ich will {date} eine Reservieren für {assistants} um {time} tätigen",
+            "ich will {date} eine Reservieren um {time} tätigen",
+            "ich will {date} eine Reservieren um {time} für {assistants} tätigen",
+            "ich will {date} eine Reservieren um {time} für {assistants} Personen tätigen",
+            "ich will {date} um {time} eine Reservieren tätigen",
+            "ich will {date} um {time} eine Reservieren für {assistants} tätigen",
+            "ich will {date} um {time} eine Reservieren für {assistants} Personen tätigen",
+            "ich will um {time} eine Reservieren für {assistants} Personen {date} tätigen",
+            "ich will um {time} eine Reservieren für {assistants} {date} tätigen",
+            "ich will um {time} eine Reservieren {date} tätigen",
+            "ich will um {time} {date} eine Reservieren tätigen",
+            "ich will um {time} {date} eine Reservieren für {assistants} tätigen",
+            "ich will um {time} {date} eine Reservieren für {assistants} Personen tätigen",
+            "bitte buche einen Tisch",
+            "bitte buche einen Tisch auf den Namen {name}",
+            "bitte buche einen Tisch auf {name}",
+            "bitte buche einen Tisch für {assistants}",
+            "bitte buche einen Tisch für {assistants} Personen",
+            "bitte buche einen Tisch für {assistants} Personen am {date}",
+            "bitte buche einen Tisch für {assistants} Personen am {date} um {time}",
+            "bitte buche einen Tisch für {assistants} Personen um {time}",
+            "bitte buche einen Tisch für {assistants} Personen um {time} am {date}",
+            "bitte buche einen Tisch für {assistants} am {date}",
+            "bitte buche einen Tisch für {assistants} am {date} um {time}",
+            "bitte buche einen Tisch für {assistants} um {time}",
+            "bitte buche einen Tisch für {assistants} um {time} am {date}",
+            "bitte buche einen Tisch am {date}",
+            "bitte buche einen Tisch am {date} für {assistants}",
+            "bitte buche einen Tisch am {date} für {assistants} Personen",
+            "bitte buche einen Tisch am {date} um {time}",
+            "bitte buche einen Tisch am {date} um {time} für {assistants}",
+            "bitte buche einen Tisch am {date} um {time} für {assistants} Personen",
+            "bitte buche einen Tisch um {time}",
+            "bitte buche einen Tisch um {time} für {assistants}",
+            "bitte buche einen Tisch um {time} für {assistants} Personen",
+            "bitte buche einen Tisch um {time} am {date}",
+            "bitte buche am {date} einen Tisch",
+            "bitte buche am {date} einen Tisch für {assistants}",
+            "bitte buche am {date} einen Tisch für {assistants} Personen",
+            "bitte buche am {date} einen Tisch für {assistants} Personen um {time}",
+            "bitte buche am {date} einen Tisch für {assistants} um {time}",
+            "bitte buche am {date} einen Tisch um {time}",
+            "bitte buche am {date} einen Tisch um {time} für {assistants}",
+            "bitte buche am {date} einen Tisch um {time} für {assistants} Personen",
+            "bitte buche am {date} um {time} einen Tisch",
+            "bitte buche am {date} um {time} einen Tisch für {assistants}",
+            "bitte buche am {date} um {time} einen Tisch für {assistants} Personen",
+            "bitte buche um {time} einen Tisch",
+            "bitte buche um {time} einen Tisch für {assistants}",
+            "bitte buche um {time} einen Tisch für {assistants} Personen",
+            "bitte buche um {time} einen Tisch für {assistants} Personen am {date}",
+            "bitte buche um {time} einen Tisch für {assistants} am {date}",
+            "bitte buche um {time} einen Tisch am {date}",
+            "bitte buche um {time} am {date} einen Tisch",
+            "bitte buche um {time} am {date} einen Tisch für {assistants}",
+            "bitte buche um {time} am {date} einen Tisch für {assistants} Personen",
+            "buche einen Tisch",
+            "buche einen Tisch auf den Namen {name}",
+            "buche einen Tisch auf {name}",
+            "buche einen Tisch für {assistants}",
+            "buche einen Tisch für {assistants} Personen",
+            "buche einen Tisch für {assistants} Personen am {date}",
+            "buche einen Tisch für {assistants} Personen am {date} um {time}",
+            "buche einen Tisch für {assistants} Personen um {time}",
+            "buche einen Tisch für {assistants} Personen um {time} am {date}",
+            "buche einen Tisch für {assistants} am {date}",
+            "buche einen Tisch für {assistants} am {date} um {time}",
+            "buche einen Tisch für {assistants} um {time}",
+            "buche einen Tisch für {assistants} um {time} am {date}",
+            "buche einen Tisch am {date}",
+            "buche einen Tisch am {date} für {assistants}",
+            "buche einen Tisch am {date} für {assistants} Personen",
+            "buche einen Tisch am {date} um {time}",
+            "buche einen Tisch am {date} um {time} für {assistants}",
+            "buche einen Tisch am {date} um {time} für {assistants} Personen",
+            "buche einen Tisch um {time}",
+            "buche einen Tisch um {time} für {assistants}",
+            "buche einen Tisch um {time} für {assistants} Personen",
+            "buche einen Tisch um {time} am {date}",
+            "buche am {date} einen Tisch",
+            "buche am {date} einen Tisch für {assistants}",
+            "buche am {date} einen Tisch für {assistants} Personen",
+            "buche am {date} einen Tisch für {assistants} Personen um {time}",
+            "buche am {date} einen Tisch für {assistants} um {time}",
+            "buche am {date} einen Tisch um {time}",
+            "buche am {date} einen Tisch um {time} für {assistants}",
+            "buche am {date} einen Tisch um {time} für {assistants} Personen",
+            "buche am {date} um {time} einen Tisch",
+            "buche am {date} um {time} einen Tisch für {assistants}",
+            "buche am {date} um {time} einen Tisch für {assistants} Personen",
+            "buche um {time} einen Tisch",
+            "buche um {time} einen Tisch für {assistants}",
+            "buche um {time} einen Tisch für {assistants} Personen",
+            "buche um {time} einen Tisch für {assistants} Personen am {date}",
+            "buche um {time} einen Tisch für {assistants} am {date}",
+            "buche um {time} einen Tisch am {date}",
+            "buche um {time} am {date} einen Tisch",
+            "buche um {time} am {date} einen Tisch für {assistants}",
+            "buche um {time} am {date} einen Tisch für {assistants} Personen",
+            "bitte tätige eine Buchung",
+            "bitte tätige eine Buchung auf den Namen {name}",
+            "bitte tätige eine Buchung auf {name}",
+            "bitte tätige eine Buchung für {assistants}",
+            "bitte tätige eine Buchung für {assistants} Personen",
+            "bitte tätige eine Buchung für {assistants} Personen am {date}",
+            "bitte tätige eine Buchung für {assistants} Personen am {date} um {time}",
+            "bitte tätige eine Buchung für {assistants} Personen um {time}",
+            "bitte tätige eine Buchung für {assistants} Personen um {time} am {date}",
+            "bitte tätige eine Buchung für {assistants} am {date}",
+            "bitte tätige eine Buchung für {assistants} am {date} um {time}",
+            "bitte tätige eine Buchung für {assistants} um {time}",
+            "bitte tätige eine Buchung für {assistants} um {time} am {date}",
+            "bitte tätige eine Buchung am {date}",
+            "bitte tätige eine Buchung am {date} für {assistants}",
+            "bitte tätige eine Buchung am {date} für {assistants} Personen",
+            "bitte tätige eine Buchung am {date} um {time}",
+            "bitte tätige eine Buchung am {date} um {time} für {assistants}",
+            "bitte tätige eine Buchung am {date} um {time} für {assistants} Personen",
+            "bitte tätige eine Buchung um {time}",
+            "bitte tätige eine Buchung um {time} für {assistants}",
+            "bitte tätige eine Buchung um {time} für {assistants} Personen",
+            "bitte tätige eine Buchung um {time} am {date}",
+            "bitte tätige am {date} eine Buchung",
+            "bitte tätige am {date} eine Buchung für {assistants}",
+            "bitte tätige am {date} eine Buchung für {assistants} Personen",
+            "bitte tätige am {date} eine Buchung für {assistants} Personen um {time}",
+            "bitte tätige am {date} eine Buchung für {assistants} um {time}",
+            "bitte tätige am {date} eine Buchung um {time}",
+            "bitte tätige am {date} eine Buchung um {time} für {assistants}",
+            "bitte tätige am {date} eine Buchung um {time} für {assistants} Personen",
+            "bitte tätige am {date} um {time} eine Buchung",
+            "bitte tätige am {date} um {time} eine Buchung für {assistants}",
+            "bitte tätige am {date} um {time} eine Buchung für {assistants} Personen",
+            "bitte tätige um {time} eine Buchung",
+            "bitte tätige um {time} eine Buchung für {assistants}",
+            "bitte tätige um {time} eine Buchung für {assistants} Personen",
+            "bitte tätige um {time} eine Buchung für {assistants} Personen am {date}",
+            "bitte tätige um {time} eine Buchung für {assistants} am {date}",
+            "bitte tätige um {time} eine Buchung am {date}",
+            "bitte tätige um {time} am {date} eine Buchung",
+            "bitte tätige um {time} am {date} eine Buchung für {assistants}",
+            "bitte tätige um {time} am {date} eine Buchung für {assistants} Personen",
+            "tätige eine Buchung",
+            "tätige eine Buchung auf den Namen {name}",
+            "tätige eine Buchung auf {name}",
+            "tätige eine Buchung für {assistants}",
+            "tätige eine Buchung für {assistants} Personen",
+            "tätige eine Buchung für {assistants} Personen am {date}",
+            "tätige eine Buchung für {assistants} Personen am {date} um {time}",
+            "tätige eine Buchung für {assistants} Personen um {time}",
+            "tätige eine Buchung für {assistants} Personen um {time} am {date}",
+            "tätige eine Buchung für {assistants} am {date}",
+            "tätige eine Buchung für {assistants} am {date} um {time}",
+            "tätige eine Buchung für {assistants} um {time}",
+            "tätige eine Buchung für {assistants} um {time} am {date}",
+            "tätige eine Buchung am {date}",
+            "tätige eine Buchung am {date} für {assistants}",
+            "tätige eine Buchung am {date} für {assistants} Personen",
+            "tätige eine Buchung am {date} um {time}",
+            "tätige eine Buchung am {date} um {time} für {assistants}",
+            "tätige eine Buchung am {date} um {time} für {assistants} Personen",
+            "tätige eine Buchung um {time}",
+            "tätige eine Buchung um {time} für {assistants}",
+            "tätige eine Buchung um {time} für {assistants} Personen",
+            "tätige eine Buchung um {time} am {date}",
+            "tätige am {date} eine Buchung",
+            "tätige am {date} eine Buchung für {assistants}",
+            "tätige am {date} eine Buchung für {assistants} Personen",
+            "tätige am {date} eine Buchung für {assistants} Personen um {time}",
+            "tätige am {date} eine Buchung für {assistants} um {time}",
+            "tätige am {date} eine Buchung um {time}",
+            "tätige am {date} eine Buchung um {time} für {assistants}",
+            "tätige am {date} eine Buchung um {time} für {assistants} Personen",
+            "tätige am {date} um {time} eine Buchung",
+            "tätige am {date} um {time} eine Buchung für {assistants}",
+            "tätige am {date} um {time} eine Buchung für {assistants} Personen",
+            "tätige um {time} eine Buchung",
+            "tätige um {time} eine Buchung für {assistants}",
+            "tätige um {time} eine Buchung für {assistants} Personen",
+            "tätige um {time} eine Buchung für {assistants} Personen am {date}",
+            "tätige um {time} eine Buchung für {assistants} am {date}",
+            "tätige um {time} eine Buchung am {date}",
+            "tätige um {time} am {date} eine Buchung",
+            "tätige um {time} am {date} eine Buchung für {assistants}",
+            "tätige um {time} am {date} eine Buchung für {assistants} Personen",
+            "bitte tätige eine Reservierung",
+            "bitte tätige eine Reservierung auf den Namen {name}",
+            "bitte tätige eine Reservierung auf {name}",
+            "bitte tätige eine Reservierung für {assistants}",
+            "bitte tätige eine Reservierung für {assistants} Personen",
+            "bitte tätige eine Reservierung für {assistants} Personen am {date}",
+            "bitte tätige eine Reservierung für {assistants} Personen am {date} um {time}",
+            "bitte tätige eine Reservierung für {assistants} Personen um {time}",
+            "bitte tätige eine Reservierung für {assistants} Personen um {time} am {date}",
+            "bitte tätige eine Reservierung für {assistants} am {date}",
+            "bitte tätige eine Reservierung für {assistants} am {date} um {time}",
+            "bitte tätige eine Reservierung für {assistants} um {time}",
+            "bitte tätige eine Reservierung für {assistants} um {time} am {date}",
+            "bitte tätige eine Reservierung am {date}",
+            "bitte tätige eine Reservierung am {date} für {assistants}",
+            "bitte tätige eine Reservierung am {date} für {assistants} Personen",
+            "bitte tätige eine Reservierung am {date} um {time}",
+            "bitte tätige eine Reservierung am {date} um {time} für {assistants}",
+            "bitte tätige eine Reservierung am {date} um {time} für {assistants} Personen",
+            "bitte tätige eine Reservierung um {time}",
+            "bitte tätige eine Reservierung um {time} für {assistants}",
+            "bitte tätige eine Reservierung um {time} für {assistants} Personen",
+            "bitte tätige eine Reservierung um {time} am {date}",
+            "bitte tätige am {date} eine Reservierung",
+            "bitte tätige am {date} eine Reservierung für {assistants}",
+            "bitte tätige am {date} eine Reservierung für {assistants} Personen",
+            "bitte tätige am {date} eine Reservierung für {assistants} Personen um {time}",
+            "bitte tätige am {date} eine Reservierung für {assistants} um {time}",
+            "bitte tätige am {date} eine Reservierung um {time}",
+            "bitte tätige am {date} eine Reservierung um {time} für {assistants}",
+            "bitte tätige am {date} eine Reservierung um {time} für {assistants} Personen",
+            "bitte tätige am {date} um {time} eine Reservierung",
+            "bitte tätige am {date} um {time} eine Reservierung für {assistants}",
+            "bitte tätige am {date} um {time} eine Reservierung für {assistants} Personen",
+            "bitte tätige um {time} eine Reservierung",
+            "bitte tätige um {time} eine Reservierung für {assistants}",
+            "bitte tätige um {time} eine Reservierung für {assistants} Personen",
+            "bitte tätige um {time} eine Reservierung für {assistants} Personen am {date}",
+            "bitte tätige um {time} eine Reservierung für {assistants} am {date}",
+            "bitte tätige um {time} eine Reservierung am {date}",
+            "bitte tätige um {time} am {date} eine Reservierung",
+            "bitte tätige um {time} am {date} eine Reservierung für {assistants}",
+            "bitte tätige um {time} am {date} eine Reservierung für {assistants} Personen",
+            "tätige eine Reservierung",
+            "tätige eine Reservierung auf den Namen {name}",
+            "tätige eine Reservierung auf {name}",
+            "tätige eine Reservierung für {assistants}",
+            "tätige eine Reservierung für {assistants} Personen",
+            "tätige eine Reservierung für {assistants} Personen am {date}",
+            "tätige eine Reservierung für {assistants} Personen am {date} um {time}",
+            "tätige eine Reservierung für {assistants} Personen um {time}",
+            "tätige eine Reservierung für {assistants} Personen um {time} am {date}",
+            "tätige eine Reservierung für {assistants} am {date}",
+            "tätige eine Reservierung für {assistants} am {date} um {time}",
+            "tätige eine Reservierung für {assistants} um {time}",
+            "tätige eine Reservierung für {assistants} um {time} am {date}",
+            "tätige eine Reservierung am {date}",
+            "tätige eine Reservierung am {date} für {assistants}",
+            "tätige eine Reservierung am {date} für {assistants} Personen",
+            "tätige eine Reservierung am {date} um {time}",
+            "tätige eine Reservierung am {date} um {time} für {assistants}",
+            "tätige eine Reservierung am {date} um {time} für {assistants} Personen",
+            "tätige eine Reservierung um {time}",
+            "tätige eine Reservierung um {time} für {assistants}",
+            "tätige eine Reservierung um {time} für {assistants} Personen",
+            "tätige eine Reservierung um {time} am {date}",
+            "tätige am {date} eine Reservierung",
+            "tätige am {date} eine Reservierung für {assistants}",
+            "tätige am {date} eine Reservierung für {assistants} Personen",
+            "tätige am {date} eine Reservierung für {assistants} Personen um {time}",
+            "tätige am {date} eine Reservierung für {assistants} um {time}",
+            "tätige am {date} eine Reservierung um {time}",
+            "tätige am {date} eine Reservierung um {time} für {assistants}",
+            "tätige am {date} eine Reservierung um {time} für {assistants} Personen",
+            "tätige am {date} um {time} eine Reservierung",
+            "tätige am {date} um {time} eine Reservierung für {assistants}",
+            "tätige am {date} um {time} eine Reservierung für {assistants} Personen",
+            "tätige um {time} eine Reservierung",
+            "tätige um {time} eine Reservierung für {assistants}",
+            "tätige um {time} eine Reservierung für {assistants} Personen",
+            "tätige um {time} eine Reservierung für {assistants} Personen am {date}",
+            "tätige um {time} eine Reservierung für {assistants} am {date}",
+            "tätige um {time} eine Reservierung am {date}",
+            "tätige um {time} am {date} eine Reservierung",
+            "tätige um {time} am {date} eine Reservierung für {assistants}",
+            "tätige um {time} am {date} eine Reservierung für {assistants} Personen",
+            "bitte mach eine Reservierung",
+            "bitte mach eine Reservierung auf den Namen {name}",
+            "bitte mach eine Reservierung auf {name}",
+            "bitte mach eine Reservierung für {assistants}",
+            "bitte mach eine Reservierung für {assistants} Personen",
+            "bitte mach eine Reservierung für {assistants} Personen am {date}",
+            "bitte mach eine Reservierung für {assistants} Personen am {date} um {time}",
+            "bitte mach eine Reservierung für {assistants} Personen um {time}",
+            "bitte mach eine Reservierung für {assistants} Personen um {time} am {date}",
+            "bitte mach eine Reservierung für {assistants} am {date}",
+            "bitte mach eine Reservierung für {assistants} am {date} um {time}",
+            "bitte mach eine Reservierung für {assistants} um {time}",
+            "bitte mach eine Reservierung für {assistants} um {time} am {date}",
+            "bitte mach eine Reservierung am {date}",
+            "bitte mach eine Reservierung am {date} für {assistants}",
+            "bitte mach eine Reservierung am {date} für {assistants} Personen",
+            "bitte mach eine Reservierung am {date} um {time}",
+            "bitte mach eine Reservierung am {date} um {time} für {assistants}",
+            "bitte mach eine Reservierung am {date} um {time} für {assistants} Personen",
+            "bitte mach eine Reservierung um {time}",
+            "bitte mach eine Reservierung um {time} für {assistants}",
+            "bitte mach eine Reservierung um {time} für {assistants} Personen",
+            "bitte mach eine Reservierung um {time} am {date}",
+            "bitte mach am {date} eine Reservierung",
+            "bitte mach am {date} eine Reservierung für {assistants}",
+            "bitte mach am {date} eine Reservierung für {assistants} Personen",
+            "bitte mach am {date} eine Reservierung für {assistants} Personen um {time}",
+            "bitte mach am {date} eine Reservierung für {assistants} um {time}",
+            "bitte mach am {date} eine Reservierung um {time}",
+            "bitte mach am {date} eine Reservierung um {time} für {assistants}",
+            "bitte mach am {date} eine Reservierung um {time} für {assistants} Personen",
+            "bitte mach am {date} um {time} eine Reservierung",
+            "bitte mach am {date} um {time} eine Reservierung für {assistants}",
+            "bitte mach am {date} um {time} eine Reservierung für {assistants} Personen",
+            "bitte mach um {time} eine Reservierung",
+            "bitte mach um {time} eine Reservierung für {assistants}",
+            "bitte mach um {time} eine Reservierung für {assistants} Personen",
+            "bitte mach um {time} eine Reservierung für {assistants} Personen am {date}",
+            "bitte mach um {time} eine Reservierung für {assistants} am {date}",
+            "bitte mach um {time} eine Reservierung am {date}",
+            "bitte mach um {time} am {date} eine Reservierung",
+            "bitte mach um {time} am {date} eine Reservierung für {assistants}",
+            "bitte mach um {time} am {date} eine Reservierung für {assistants} Personen",
+            "mach eine Reservierung",
+            "mach eine Reservierung auf den Namen {name}",
+            "mach eine Reservierung auf {name}",
+            "mach eine Reservierung für {assistants}",
+            "mach eine Reservierung für {assistants} Personen",
+            "mach eine Reservierung für {assistants} Personen am {date}",
+            "mach eine Reservierung für {assistants} Personen am {date} um {time}",
+            "mach eine Reservierung für {assistants} Personen um {time}",
+            "mach eine Reservierung für {assistants} Personen um {time} am {date}",
+            "mach eine Reservierung für {assistants} am {date}",
+            "mach eine Reservierung für {assistants} am {date} um {time}",
+            "mach eine Reservierung für {assistants} um {time}",
+            "mach eine Reservierung für {assistants} um {time} am {date}",
+            "mach eine Reservierung am {date}",
+            "mach eine Reservierung am {date} für {assistants}",
+            "mach eine Reservierung am {date} für {assistants} Personen",
+            "mach eine Reservierung am {date} um {time}",
+            "mach eine Reservierung am {date} um {time} für {assistants}",
+            "mach eine Reservierung am {date} um {time} für {assistants} Personen",
+            "mach eine Reservierung um {time}",
+            "mach eine Reservierung um {time} für {assistants}",
+            "mach eine Reservierung um {time} für {assistants} Personen",
+            "mach eine Reservierung um {time} am {date}",
+            "mach am {date} eine Reservierung",
+            "mach am {date} eine Reservierung für {assistants}",
+            "mach am {date} eine Reservierung für {assistants} Personen",
+            "mach am {date} eine Reservierung für {assistants} Personen um {time}",
+            "mach am {date} eine Reservierung für {assistants} um {time}",
+            "mach am {date} eine Reservierung um {time}",
+            "mach am {date} eine Reservierung um {time} für {assistants}",
+            "mach am {date} eine Reservierung um {time} für {assistants} Personen",
+            "mach am {date} um {time} eine Reservierung",
+            "mach am {date} um {time} eine Reservierung für {assistants}",
+            "mach am {date} um {time} eine Reservierung für {assistants} Personen",
+            "mach um {time} eine Reservierung",
+            "mach um {time} eine Reservierung für {assistants}",
+            "mach um {time} eine Reservierung für {assistants} Personen",
+            "mach um {time} eine Reservierung für {assistants} Personen am {date}",
+            "mach um {time} eine Reservierung für {assistants} am {date}",
+            "mach um {time} eine Reservierung am {date}",
+            "mach um {time} am {date} eine Reservierung",
+            "mach um {time} am {date} eine Reservierung für {assistants}",
+            "mach um {time} am {date} eine Reservierung für {assistants} Personen",
+            "bitte mach eine Buchung",
+            "bitte mach eine Buchung auf den Namen {name}",
+            "bitte mach eine Buchung auf {name}",
+            "bitte mach eine Buchung für {assistants}",
+            "bitte mach eine Buchung für {assistants} Personen",
+            "bitte mach eine Buchung für {assistants} Personen am {date}",
+            "bitte mach eine Buchung für {assistants} Personen am {date} um {time}",
+            "bitte mach eine Buchung für {assistants} Personen um {time}",
+            "bitte mach eine Buchung für {assistants} Personen um {time} am {date}",
+            "bitte mach eine Buchung für {assistants} am {date}",
+            "bitte mach eine Buchung für {assistants} am {date} um {time}",
+            "bitte mach eine Buchung für {assistants} um {time}",
+            "bitte mach eine Buchung für {assistants} um {time} am {date}",
+            "bitte mach eine Buchung am {date}",
+            "bitte mach eine Buchung am {date} für {assistants}",
+            "bitte mach eine Buchung am {date} für {assistants} Personen",
+            "bitte mach eine Buchung am {date} um {time}",
+            "bitte mach eine Buchung am {date} um {time} für {assistants}",
+            "bitte mach eine Buchung am {date} um {time} für {assistants} Personen",
+            "bitte mach eine Buchung um {time}",
+            "bitte mach eine Buchung um {time} für {assistants}",
+            "bitte mach eine Buchung um {time} für {assistants} Personen",
+            "bitte mach eine Buchung um {time} am {date}",
+            "bitte mach am {date} eine Buchung",
+            "bitte mach am {date} eine Buchung für {assistants}",
+            "bitte mach am {date} eine Buchung für {assistants} Personen",
+            "bitte mach am {date} eine Buchung für {assistants} Personen um {time}",
+            "bitte mach am {date} eine Buchung für {assistants} um {time}",
+            "bitte mach am {date} eine Buchung um {time}",
+            "bitte mach am {date} eine Buchung um {time} für {assistants}",
+            "bitte mach am {date} eine Buchung um {time} für {assistants} Personen",
+            "bitte mach am {date} um {time} eine Buchung",
+            "bitte mach am {date} um {time} eine Buchung für {assistants}",
+            "bitte mach am {date} um {time} eine Buchung für {assistants} Personen",
+            "bitte mach um {time} eine Buchung",
+            "bitte mach um {time} eine Buchung für {assistants}",
+            "bitte mach um {time} eine Buchung für {assistants} Personen",
+            "bitte mach um {time} eine Buchung für {assistants} Personen am {date}",
+            "bitte mach um {time} eine Buchung für {assistants} am {date}",
+            "bitte mach um {time} eine Buchung am {date}",
+            "bitte mach um {time} am {date} eine Buchung",
+            "bitte mach um {time} am {date} eine Buchung für {assistants}",
+            "bitte mach um {time} am {date} eine Buchung für {assistants} Personen",
+            "mach eine Buchung",
+            "mach eine Buchung auf den Namen {name}",
+            "mach eine Buchung auf {name}",
+            "mach eine Buchung für {assistants}",
+            "mach eine Buchung für {assistants} Personen",
+            "mach eine Buchung für {assistants} Personen am {date}",
+            "mach eine Buchung für {assistants} Personen am {date} um {time}",
+            "mach eine Buchung für {assistants} Personen um {time}",
+            "mach eine Buchung für {assistants} Personen um {time} am {date}",
+            "mach eine Buchung für {assistants} am {date}",
+            "mach eine Buchung für {assistants} am {date} um {time}",
+            "mach eine Buchung für {assistants} um {time}",
+            "mach eine Buchung für {assistants} um {time} am {date}",
+            "mach eine Buchung am {date}",
+            "mach eine Buchung am {date} für {assistants}",
+            "mach eine Buchung am {date} für {assistants} Personen",
+            "mach eine Buchung am {date} um {time}",
+            "mach eine Buchung am {date} um {time} für {assistants}",
+            "mach eine Buchung am {date} um {time} für {assistants} Personen",
+            "mach eine Buchung um {time}",
+            "mach eine Buchung um {time} für {assistants}",
+            "mach eine Buchung um {time} für {assistants} Personen",
+            "mach eine Buchung um {time} am {date}",
+            "mach am {date} eine Buchung",
+            "mach am {date} eine Buchung für {assistants}",
+            "mach am {date} eine Buchung für {assistants} Personen",
+            "mach am {date} eine Buchung für {assistants} Personen um {time}",
+            "mach am {date} eine Buchung für {assistants} um {time}",
+            "mach am {date} eine Buchung um {time}",
+            "mach am {date} eine Buchung um {time} für {assistants}",
+            "mach am {date} eine Buchung um {time} für {assistants} Personen",
+            "mach am {date} um {time} eine Buchung",
+            "mach am {date} um {time} eine Buchung für {assistants}",
+            "mach am {date} um {time} eine Buchung für {assistants} Personen",
+            "mach um {time} eine Buchung",
+            "mach um {time} eine Buchung für {assistants}",
+            "mach um {time} eine Buchung für {assistants} Personen",
+            "mach um {time} eine Buchung für {assistants} Personen am {date}",
+            "mach um {time} eine Buchung für {assistants} am {date}",
+            "mach um {time} eine Buchung am {date}",
+            "mach um {time} am {date} eine Buchung",
+            "mach um {time} am {date} eine Buchung für {assistants}",
+            "mach um {time} am {date} eine Buchung für {assistants} Personen",
+            "bitte reserviere einen Tisch",
+            "bitte reserviere einen Tisch auf den Namen {name}",
+            "bitte reserviere einen Tisch auf {name}",
+            "bitte reserviere einen Tisch für {assistants}",
+            "bitte reserviere einen Tisch für {assistants} Personen",
+            "bitte reserviere einen Tisch für {assistants} Personen am {date}",
+            "bitte reserviere einen Tisch für {assistants} Personen am {date} um {time}",
+            "bitte reserviere einen Tisch für {assistants} Personen um {time}",
+            "bitte reserviere einen Tisch für {assistants} Personen um {time} am {date}",
+            "bitte reserviere einen Tisch für {assistants} am {date}",
+            "bitte reserviere einen Tisch für {assistants} am {date} um {time}",
+            "bitte reserviere einen Tisch für {assistants} um {time}",
+            "bitte reserviere einen Tisch für {assistants} um {time} am {date}",
+            "bitte reserviere einen Tisch am {date}",
+            "bitte reserviere einen Tisch am {date} für {assistants}",
+            "bitte reserviere einen Tisch am {date} für {assistants} Personen",
+            "bitte reserviere einen Tisch am {date} um {time}",
+            "bitte reserviere einen Tisch am {date} um {time} für {assistants}",
+            "bitte reserviere einen Tisch am {date} um {time} für {assistants} Personen",
+            "bitte reserviere einen Tisch um {time}",
+            "bitte reserviere einen Tisch um {time} für {assistants}",
+            "bitte reserviere einen Tisch um {time} für {assistants} Personen",
+            "bitte reserviere einen Tisch um {time} am {date}",
+            "bitte reserviere am {date} einen Tisch",
+            "bitte reserviere am {date} einen Tisch für {assistants}",
+            "bitte reserviere am {date} einen Tisch für {assistants} Personen",
+            "bitte reserviere am {date} einen Tisch für {assistants} Personen um {time}",
+            "bitte reserviere am {date} einen Tisch für {assistants} um {time}",
+            "bitte reserviere am {date} einen Tisch um {time}",
+            "bitte reserviere am {date} einen Tisch um {time} für {assistants}",
+            "bitte reserviere am {date} einen Tisch um {time} für {assistants} Personen",
+            "bitte reserviere am {date} um {time} einen Tisch",
+            "bitte reserviere am {date} um {time} einen Tisch für {assistants}",
+            "bitte reserviere am {date} um {time} einen Tisch für {assistants} Personen",
+            "bitte reserviere um {time} einen Tisch",
+            "bitte reserviere um {time} einen Tisch für {assistants}",
+            "bitte reserviere um {time} einen Tisch für {assistants} Personen",
+            "bitte reserviere um {time} einen Tisch für {assistants} Personen am {date}",
+            "bitte reserviere um {time} einen Tisch für {assistants} am {date}",
+            "bitte reserviere um {time} einen Tisch am {date}",
+            "bitte reserviere um {time} am {date} einen Tisch",
+            "bitte reserviere um {time} am {date} einen Tisch für {assistants}",
+            "bitte reserviere um {time} am {date} einen Tisch für {assistants} Personen",
+            "reserviere einen Tisch",
+            "reserviere einen Tisch auf den Namen {name}",
+            "reserviere einen Tisch auf {name}",
+            "reserviere einen Tisch für {assistants}",
+            "reserviere einen Tisch für {assistants} Personen",
+            "reserviere einen Tisch für {assistants} Personen am {date}",
+            "reserviere einen Tisch für {assistants} Personen am {date} um {time}",
+            "reserviere einen Tisch für {assistants} Personen um {time}",
+            "reserviere einen Tisch für {assistants} Personen um {time} am {date}",
+            "reserviere einen Tisch für {assistants} am {date}",
+            "reserviere einen Tisch für {assistants} am {date} um {time}",
+            "reserviere einen Tisch für {assistants} um {time}",
+            "reserviere einen Tisch für {assistants} um {time} am {date}",
+            "reserviere einen Tisch am {date}",
+            "reserviere einen Tisch am {date} für {assistants}",
+            "reserviere einen Tisch am {date} für {assistants} Personen",
+            "reserviere einen Tisch am {date} um {time}",
+            "reserviere einen Tisch am {date} um {time} für {assistants}",
+            "reserviere einen Tisch am {date} um {time} für {assistants} Personen",
+            "reserviere einen Tisch um {time}",
+            "reserviere einen Tisch um {time} für {assistants}",
+            "reserviere einen Tisch um {time} für {assistants} Personen",
+            "reserviere einen Tisch um {time} am {date}",
+            "reserviere am {date} einen Tisch",
+            "reserviere am {date} einen Tisch für {assistants}",
+            "reserviere am {date} einen Tisch für {assistants} Personen",
+            "reserviere am {date} einen Tisch für {assistants} Personen um {time}",
+            "reserviere am {date} einen Tisch für {assistants} um {time}",
+            "reserviere am {date} einen Tisch um {time}",
+            "reserviere am {date} einen Tisch um {time} für {assistants}",
+            "reserviere am {date} einen Tisch um {time} für {assistants} Personen",
+            "reserviere am {date} um {time} einen Tisch",
+            "reserviere am {date} um {time} einen Tisch für {assistants}",
+            "reserviere am {date} um {time} einen Tisch für {assistants} Personen",
+            "reserviere um {time} einen Tisch",
+            "reserviere um {time} einen Tisch für {assistants}",
+            "reserviere um {time} einen Tisch für {assistants} Personen",
+            "reserviere um {time} einen Tisch für {assistants} Personen am {date}",
+            "reserviere um {time} einen Tisch für {assistants} am {date}",
+            "reserviere um {time} einen Tisch am {date}",
+            "reserviere um {time} am {date} einen Tisch",
+            "reserviere um {time} am {date} einen Tisch für {assistants}",
+            "reserviere um {time} am {date} einen Tisch für {assistants} Personen",
+            "ich möchte einen Tisch auf den Namen {name} buchen",
+            "ich möchte einen Tisch auf {name} buchen",
+            "ich möchte einen Tisch buchen",
+            "ich möchte einen Tisch für {assistants} buchen",
+            "ich möchte einen Tisch für {assistants} Personen buchen",
+            "ich möchte einen Tisch für {assistants} Personen am {date} buchen",
+            "ich möchte einen Tisch für {assistants} Personen am {date} um {time} buchen",
+            "ich möchte einen Tisch für {assistants} Personen um {time} buchen",
+            "ich möchte einen Tisch für {assistants} Personen um {time} am {date} buchen",
+            "ich möchte einen Tisch für {assistants} am {date} buchen",
+            "ich möchte einen Tisch für {assistants} am {date} um {time} buchen",
+            "ich möchte einen Tisch für {assistants} um {time} buchen",
+            "ich möchte einen Tisch für {assistants} um {time} am {date} buchen",
+            "ich möchte einen Tisch am {date} buchen",
+            "ich möchte einen Tisch am {date} für {assistants} buchen",
+            "ich möchte einen Tisch am {date} für {assistants} Personen buchen",
+            "ich möchte einen Tisch am {date} um {time} buchen",
+            "ich möchte einen Tisch am {date} um {time} für {assistants} buchen",
+            "ich möchte einen Tisch am {date} um {time} für {assistants} Personen buchen",
+            "ich möchte einen Tisch um {time} buchen",
+            "ich möchte einen Tisch um {time} für {assistants} buchen",
+            "ich möchte einen Tisch um {time} für {assistants} Personen buchen",
+            "ich möchte einen Tisch um {time} am {date} buchen",
+            "ich möchte am {date} einen Tisch buchen",
+            "ich möchte am {date} einen Tisch für {assistants} buchen",
+            "ich möchte am {date} einen Tisch für {assistants} Personen buchen",
+            "ich möchte am {date} einen Tisch für {assistants} Personen um {time} buchen",
+            "ich möchte am {date} einen Tisch für {assistants} um {time} buchen",
+            "ich möchte am {date} einen Tisch um {time} buchen",
+            "ich möchte am {date} einen Tisch um {time} für {assistants} buchen",
+            "ich möchte am {date} einen Tisch um {time} für {assistants} Personen buchen",
+            "ich möchte am {date} um {time} einen Tisch buchen",
+            "ich möchte am {date} um {time} einen Tisch für {assistants} buchen",
+            "ich möchte am {date} um {time} einen Tisch für {assistants} Personen buchen",
+            "ich möchte um {time} einen Tisch buchen",
+            "ich möchte um {time} einen Tisch für {assistants} buchen",
+            "ich möchte um {time} einen Tisch für {assistants} Personen buchen",
+            "ich möchte um {time} einen Tisch für {assistants} Personen am {date} buchen",
+            "ich möchte um {time} einen Tisch für {assistants} am {date} buchen",
+            "ich möchte um {time} einen Tisch am {date} buchen",
+            "ich möchte um {time} am {date} einen Tisch buchen",
+            "ich möchte um {time} am {date} einen Tisch für {assistants} buchen",
+            "ich möchte um {time} am {date} einen Tisch für {assistants} Personen buchen",
+            "ich will einen Tisch auf den Namen {name} buchen",
+            "ich will einen Tisch auf {name} buchen",
+            "ich will einen Tisch buchen",
+            "ich will einen Tisch für {assistants} buchen",
+            "ich will einen Tisch für {assistants} Personen buchen",
+            "ich will einen Tisch für {assistants} Personen am {date} buchen",
+            "ich will einen Tisch für {assistants} Personen am {date} um {time} buchen",
+            "ich will einen Tisch für {assistants} Personen um {time} buchen",
+            "ich will einen Tisch für {assistants} Personen um {time} am {date} buchen",
+            "ich will einen Tisch für {assistants} am {date} buchen",
+            "ich will einen Tisch für {assistants} am {date} um {time} buchen",
+            "ich will einen Tisch für {assistants} um {time} buchen",
+            "ich will einen Tisch für {assistants} um {time} am {date} buchen",
+            "ich will einen Tisch am {date} buchen",
+            "ich will einen Tisch am {date} für {assistants} buchen",
+            "ich will einen Tisch am {date} für {assistants} Personen buchen",
+            "ich will einen Tisch am {date} um {time} buchen",
+            "ich will einen Tisch am {date} um {time} für {assistants} buchen",
+            "ich will einen Tisch am {date} um {time} für {assistants} Personen buchen",
+            "ich will einen Tisch um {time} buchen",
+            "ich will einen Tisch um {time} für {assistants} buchen",
+            "ich will einen Tisch um {time} für {assistants} Personen buchen",
+            "ich will einen Tisch um {time} am {date} buchen",
+            "ich will am {date} einen Tisch buchen",
+            "ich will am {date} einen Tisch für {assistants} buchen",
+            "ich will am {date} einen Tisch für {assistants} Personen buchen",
+            "ich will am {date} einen Tisch für {assistants} Personen um {time} buchen",
+            "ich will am {date} einen Tisch für {assistants} um {time} buchen",
+            "ich will am {date} einen Tisch um {time} buchen",
+            "ich will am {date} einen Tisch um {time} für {assistants} buchen",
+            "ich will am {date} einen Tisch um {time} für {assistants} Personen buchen",
+            "ich will am {date} um {time} einen Tisch buchen",
+            "ich will am {date} um {time} einen Tisch für {assistants} buchen",
+            "ich will am {date} um {time} einen Tisch für {assistants} Personen buchen",
+            "ich will um {time} einen Tisch buchen",
+            "ich will um {time} einen Tisch für {assistants} buchen",
+            "ich will um {time} einen Tisch für {assistants} Personen buchen",
+            "ich will um {time} einen Tisch für {assistants} Personen am {date} buchen",
+            "ich will um {time} einen Tisch für {assistants} am {date} buchen",
+            "ich will um {time} einen Tisch am {date} buchen",
+            "ich will um {time} am {date} einen Tisch buchen",
+            "ich will um {time} am {date} einen Tisch für {assistants} buchen",
+            "ich will um {time} am {date} einen Tisch für {assistants} Personen buchen",
+            "ich möchte einen Tisch auf den Namen {name} reservieren",
+            "ich möchte einen Tisch auf {name} reservieren",
+            "ich möchte einen Tisch reservieren",
+            "ich möchte einen Tisch für {assistants} reservieren",
+            "ich möchte einen Tisch für {assistants} Personen reservieren",
+            "ich möchte einen Tisch für {assistants} Personen am {date} reservieren",
+            "ich möchte einen Tisch für {assistants} Personen am {date} um {time} reservieren",
+            "ich möchte einen Tisch für {assistants} Personen um {time} reservieren",
+            "ich möchte einen Tisch für {assistants} Personen um {time} am {date} reservieren",
+            "ich möchte einen Tisch für {assistants} am {date} reservieren",
+            "ich möchte einen Tisch für {assistants} am {date} um {time} reservieren",
+            "ich möchte einen Tisch für {assistants} um {time} reservieren",
+            "ich möchte einen Tisch für {assistants} um {time} am {date} reservieren",
+            "ich möchte einen Tisch am {date} reservieren",
+            "ich möchte einen Tisch am {date} für {assistants} reservieren",
+            "ich möchte einen Tisch am {date} für {assistants} Personen reservieren",
+            "ich möchte einen Tisch am {date} um {time} reservieren",
+            "ich möchte einen Tisch am {date} um {time} für {assistants} reservieren",
+            "ich möchte einen Tisch am {date} um {time} für {assistants} Personen reservieren",
+            "ich möchte einen Tisch um {time} reservieren",
+            "ich möchte einen Tisch um {time} für {assistants} reservieren",
+            "ich möchte einen Tisch um {time} für {assistants} Personen reservieren",
+            "ich möchte einen Tisch um {time} am {date} reservieren",
+            "ich möchte am {date} einen Tisch reservieren",
+            "ich möchte am {date} einen Tisch für {assistants} reservieren",
+            "ich möchte am {date} einen Tisch für {assistants} Personen reservieren",
+            "ich möchte am {date} einen Tisch für {assistants} Personen um {time} reservieren",
+            "ich möchte am {date} einen Tisch für {assistants} um {time} reservieren",
+            "ich möchte am {date} einen Tisch um {time} reservieren",
+            "ich möchte am {date} einen Tisch um {time} für {assistants} reservieren",
+            "ich möchte am {date} einen Tisch um {time} für {assistants} Personen reservieren",
+            "ich möchte am {date} um {time} einen Tisch reservieren",
+            "ich möchte am {date} um {time} einen Tisch für {assistants} reservieren",
+            "ich möchte am {date} um {time} einen Tisch für {assistants} Personen reservieren",
+            "ich möchte um {time} einen Tisch reservieren",
+            "ich möchte um {time} einen Tisch für {assistants} reservieren",
+            "ich möchte um {time} einen Tisch für {assistants} Personen reservieren",
+            "ich möchte um {time} einen Tisch für {assistants} Personen am {date} reservieren",
+            "ich möchte um {time} einen Tisch für {assistants} am {date} reservieren",
+            "ich möchte um {time} einen Tisch am {date} reservieren",
+            "ich möchte um {time} am {date} einen Tisch reservieren",
+            "ich möchte um {time} am {date} einen Tisch für {assistants} reservieren",
+            "ich möchte um {time} am {date} einen Tisch für {assistants} Personen reservieren",
+            "ich will einen Tisch auf den Namen {name} reservieren",
+            "ich will einen Tisch auf {name} reservieren",
+            "ich will einen Tisch reservieren",
+            "ich will einen Tisch für {assistants} reservieren",
+            "ich will einen Tisch für {assistants} Personen reservieren",
+            "ich will einen Tisch für {assistants} Personen am {date} reservieren",
+            "ich will einen Tisch für {assistants} Personen am {date} um {time} reservieren",
+            "ich will einen Tisch für {assistants} Personen um {time} reservieren",
+            "ich will einen Tisch für {assistants} Personen um {time} am {date} reservieren",
+            "ich will einen Tisch für {assistants} am {date} reservieren",
+            "ich will einen Tisch für {assistants} am {date} um {time} reservieren",
+            "ich will einen Tisch für {assistants} um {time} reservieren",
+            "ich will einen Tisch für {assistants} um {time} am {date} reservieren",
+            "ich will einen Tisch am {date} reservieren",
+            "ich will einen Tisch am {date} für {assistants} reservieren",
+            "ich will einen Tisch am {date} für {assistants} Personen reservieren",
+            "ich will einen Tisch am {date} um {time} reservieren",
+            "ich will einen Tisch am {date} um {time} für {assistants} reservieren",
+            "ich will einen Tisch am {date} um {time} für {assistants} Personen reservieren",
+            "ich will einen Tisch um {time} reservieren",
+            "ich will einen Tisch um {time} für {assistants} reservieren",
+            "ich will einen Tisch um {time} für {assistants} Personen reservieren",
+            "ich will einen Tisch um {time} am {date} reservieren",
+            "ich will am {date} einen Tisch reservieren",
+            "ich will am {date} einen Tisch für {assistants} reservieren",
+            "ich will am {date} einen Tisch für {assistants} Personen reservieren",
+            "ich will am {date} einen Tisch für {assistants} Personen um {time} reservieren",
+            "ich will am {date} einen Tisch für {assistants} um {time} reservieren",
+            "ich will am {date} einen Tisch um {time} reservieren",
+            "ich will am {date} einen Tisch um {time} für {assistants} reservieren",
+            "ich will am {date} einen Tisch um {time} für {assistants} Personen reservieren",
+            "ich will am {date} um {time} einen Tisch reservieren",
+            "ich will am {date} um {time} einen Tisch für {assistants} reservieren",
+            "ich will am {date} um {time} einen Tisch für {assistants} Personen reservieren",
+            "ich will um {time} einen Tisch reservieren",
+            "ich will um {time} einen Tisch für {assistants} reservieren",
+            "ich will um {time} einen Tisch für {assistants} Personen reservieren",
+            "ich will um {time} einen Tisch für {assistants} Personen am {date} reservieren",
+            "ich will um {time} einen Tisch für {assistants} am {date} reservieren",
+            "ich will um {time} einen Tisch am {date} reservieren",
+            "ich will um {time} am {date} einen Tisch reservieren",
+            "ich will um {time} am {date} einen Tisch für {assistants} reservieren",
+            "ich will um {time} am {date} einen Tisch für {assistants} Personen reservieren",
+            "ich möchte eine Buchung auf den Namen {name} tätigen",
+            "ich möchte eine Buchung auf {name} tätigen",
+            "ich möchte eine Buchung tätigen",
+            "ich möchte eine Buchung für {assistants} tätigen",
+            "ich möchte eine Buchung für {assistants} Personen tätigen",
+            "ich möchte eine Buchung für {assistants} Personen am {date} tätigen",
+            "ich möchte eine Buchung für {assistants} Personen am {date} um {time} tätigen",
+            "ich möchte eine Buchung für {assistants} Personen um {time} tätigen",
+            "ich möchte eine Buchung für {assistants} Personen um {time} am {date} tätigen",
+            "ich möchte eine Buchung für {assistants} am {date} tätigen",
+            "ich möchte eine Buchung für {assistants} am {date} um {time} tätigen",
+            "ich möchte eine Buchung für {assistants} um {time} tätigen",
+            "ich möchte eine Buchung für {assistants} um {time} am {date} tätigen",
+            "ich möchte eine Buchung am {date} tätigen",
+            "ich möchte eine Buchung am {date} für {assistants} tätigen",
+            "ich möchte eine Buchung am {date} für {assistants} Personen tätigen",
+            "ich möchte eine Buchung am {date} um {time} tätigen",
+            "ich möchte eine Buchung am {date} um {time} für {assistants} tätigen",
+            "ich möchte eine Buchung am {date} um {time} für {assistants} Personen tätigen",
+            "ich möchte eine Buchung um {time} tätigen",
+            "ich möchte eine Buchung um {time} für {assistants} tätigen",
+            "ich möchte eine Buchung um {time} für {assistants} Personen tätigen",
+            "ich möchte eine Buchung um {time} am {date} tätigen",
+            "ich möchte am {date} eine Buchung tätigen",
+            "ich möchte am {date} eine Buchung für {assistants} tätigen",
+            "ich möchte am {date} eine Buchung für {assistants} Personen tätigen",
+            "ich möchte am {date} eine Buchung für {assistants} Personen um {time} tätigen",
+            "ich möchte am {date} eine Buchung für {assistants} um {time} tätigen",
+            "ich möchte am {date} eine Buchung um {time} tätigen",
+            "ich möchte am {date} eine Buchung um {time} für {assistants} tätigen",
+            "ich möchte am {date} eine Buchung um {time} für {assistants} Personen tätigen",
+            "ich möchte am {date} um {time} eine Buchung tätigen",
+            "ich möchte am {date} um {time} eine Buchung für {assistants} tätigen",
+            "ich möchte am {date} um {time} eine Buchung für {assistants} Personen tätigen",
+            "ich möchte um {time} eine Buchung tätigen",
+            "ich möchte um {time} eine Buchung für {assistants} tätigen",
+            "ich möchte um {time} eine Buchung für {assistants} Personen tätigen",
+            "ich möchte um {time} eine Buchung für {assistants} Personen am {date} tätigen",
+            "ich möchte um {time} eine Buchung für {assistants} am {date} tätigen",
+            "ich möchte um {time} eine Buchung am {date} tätigen",
+            "ich möchte um {time} am {date} eine Buchung tätigen",
+            "ich möchte um {time} am {date} eine Buchung für {assistants} tätigen",
+            "ich möchte um {time} am {date} eine Buchung für {assistants} Personen tätigen",
+            "ich will eine Buchung auf den Namen {name} tätigen",
+            "ich will eine Buchung auf {name} tätigen",
+            "ich will eine Buchung tätigen",
+            "ich will eine Buchung für {assistants} tätigen",
+            "ich will eine Buchung für {assistants} Personen tätigen",
+            "ich will eine Buchung für {assistants} Personen am {date} tätigen",
+            "ich will eine Buchung für {assistants} Personen am {date} um {time} tätigen",
+            "ich will eine Buchung für {assistants} Personen um {time} tätigen",
+            "ich will eine Buchung für {assistants} Personen um {time} am {date} tätigen",
+            "ich will eine Buchung für {assistants} am {date} tätigen",
+            "ich will eine Buchung für {assistants} am {date} um {time} tätigen",
+            "ich will eine Buchung für {assistants} um {time} tätigen",
+            "ich will eine Buchung für {assistants} um {time} am {date} tätigen",
+            "ich will eine Buchung am {date} tätigen",
+            "ich will eine Buchung am {date} für {assistants} tätigen",
+            "ich will eine Buchung am {date} für {assistants} Personen tätigen",
+            "ich will eine Buchung am {date} um {time} tätigen",
+            "ich will eine Buchung am {date} um {time} für {assistants} tätigen",
+            "ich will eine Buchung am {date} um {time} für {assistants} Personen tätigen",
+            "ich will eine Buchung um {time} tätigen",
+            "ich will eine Buchung um {time} für {assistants} tätigen",
+            "ich will eine Buchung um {time} für {assistants} Personen tätigen",
+            "ich will eine Buchung um {time} am {date} tätigen",
+            "ich will am {date} eine Buchung tätigen",
+            "ich will am {date} eine Buchung für {assistants} tätigen",
+            "ich will am {date} eine Buchung für {assistants} Personen tätigen",
+            "ich will am {date} eine Buchung für {assistants} Personen um {time} tätigen",
+            "ich will am {date} eine Buchung für {assistants} um {time} tätigen",
+            "ich will am {date} eine Buchung um {time} tätigen",
+            "ich will am {date} eine Buchung um {time} für {assistants} tätigen",
+            "ich will am {date} eine Buchung um {time} für {assistants} Personen tätigen",
+            "ich will am {date} um {time} eine Buchung tätigen",
+            "ich will am {date} um {time} eine Buchung für {assistants} tätigen",
+            "ich will am {date} um {time} eine Buchung für {assistants} Personen tätigen",
+            "ich will um {time} eine Buchung tätigen",
+            "ich will um {time} eine Buchung für {assistants} tätigen",
+            "ich will um {time} eine Buchung für {assistants} Personen tätigen",
+            "ich will um {time} eine Buchung für {assistants} Personen am {date} tätigen",
+            "ich will um {time} eine Buchung für {assistants} am {date} tätigen",
+            "ich will um {time} eine Buchung am {date} tätigen",
+            "ich will um {time} am {date} eine Buchung tätigen",
+            "ich will um {time} am {date} eine Buchung für {assistants} tätigen",
+            "ich will um {time} am {date} eine Buchung für {assistants} Personen tätigen",
+            "ich möchte eine Buchung auf den Namen {name} machen",
+            "ich möchte eine Buchung auf {name} machen",
+            "ich möchte eine Buchung machen",
+            "ich möchte eine Buchung für {assistants} machen",
+            "ich möchte eine Buchung für {assistants} Personen machen",
+            "ich möchte eine Buchung für {assistants} Personen am {date} machen",
+            "ich möchte eine Buchung für {assistants} Personen am {date} um {time} machen",
+            "ich möchte eine Buchung für {assistants} Personen um {time} machen",
+            "ich möchte eine Buchung für {assistants} Personen um {time} am {date} machen",
+            "ich möchte eine Buchung für {assistants} am {date} machen",
+            "ich möchte eine Buchung für {assistants} am {date} um {time} machen",
+            "ich möchte eine Buchung für {assistants} um {time} machen",
+            "ich möchte eine Buchung für {assistants} um {time} am {date} machen",
+            "ich möchte eine Buchung am {date} machen",
+            "ich möchte eine Buchung am {date} für {assistants} machen",
+            "ich möchte eine Buchung am {date} für {assistants} Personen machen",
+            "ich möchte eine Buchung am {date} um {time} machen",
+            "ich möchte eine Buchung am {date} um {time} für {assistants} machen",
+            "ich möchte eine Buchung am {date} um {time} für {assistants} Personen machen",
+            "ich möchte eine Buchung um {time} machen",
+            "ich möchte eine Buchung um {time} für {assistants} machen",
+            "ich möchte eine Buchung um {time} für {assistants} Personen machen",
+            "ich möchte eine Buchung um {time} am {date} machen",
+            "ich möchte am {date} eine Buchung machen",
+            "ich möchte am {date} eine Buchung für {assistants} machen",
+            "ich möchte am {date} eine Buchung für {assistants} Personen machen",
+            "ich möchte am {date} eine Buchung für {assistants} Personen um {time} machen",
+            "ich möchte am {date} eine Buchung für {assistants} um {time} machen",
+            "ich möchte am {date} eine Buchung um {time} machen",
+            "ich möchte am {date} eine Buchung um {time} für {assistants} machen",
+            "ich möchte am {date} eine Buchung um {time} für {assistants} Personen machen",
+            "ich möchte am {date} um {time} eine Buchung machen",
+            "ich möchte am {date} um {time} eine Buchung für {assistants} machen",
+            "ich möchte am {date} um {time} eine Buchung für {assistants} Personen machen",
+            "ich möchte um {time} eine Buchung machen",
+            "ich möchte um {time} eine Buchung für {assistants} machen",
+            "ich möchte um {time} eine Buchung für {assistants} Personen machen",
+            "ich möchte um {time} eine Buchung für {assistants} Personen am {date} machen",
+            "ich möchte um {time} eine Buchung für {assistants} am {date} machen",
+            "ich möchte um {time} eine Buchung am {date} machen",
+            "ich möchte um {time} am {date} eine Buchung machen",
+            "ich möchte um {time} am {date} eine Buchung für {assistants} machen",
+            "ich möchte um {time} am {date} eine Buchung für {assistants} Personen machen",
+            "ich will eine Buchung auf den Namen {name} machen",
+            "ich will eine Buchung auf {name} machen",
+            "ich will eine Buchung machen",
+            "ich will eine Buchung für {assistants} machen",
+            "ich will eine Buchung für {assistants} Personen machen",
+            "ich will eine Buchung für {assistants} Personen am {date} machen",
+            "ich will eine Buchung für {assistants} Personen am {date} um {time} machen",
+            "ich will eine Buchung für {assistants} Personen um {time} machen",
+            "ich will eine Buchung für {assistants} Personen um {time} am {date} machen",
+            "ich will eine Buchung für {assistants} am {date} machen",
+            "ich will eine Buchung für {assistants} am {date} um {time} machen",
+            "ich will eine Buchung für {assistants} um {time} machen",
+            "ich will eine Buchung für {assistants} um {time} am {date} machen",
+            "ich will eine Buchung am {date} machen",
+            "ich will eine Buchung am {date} für {assistants} machen",
+            "ich will eine Buchung am {date} für {assistants} Personen machen",
+            "ich will eine Buchung am {date} um {time} machen",
+            "ich will eine Buchung am {date} um {time} für {assistants} machen",
+            "ich will eine Buchung am {date} um {time} für {assistants} Personen machen",
+            "ich will eine Buchung um {time} machen",
+            "ich will eine Buchung um {time} für {assistants} machen",
+            "ich will eine Buchung um {time} für {assistants} Personen machen",
+            "ich will eine Buchung um {time} am {date} machen",
+            "ich will am {date} eine Buchung machen",
+            "ich will am {date} eine Buchung für {assistants} machen",
+            "ich will am {date} eine Buchung für {assistants} Personen machen",
+            "ich will am {date} eine Buchung für {assistants} Personen um {time} machen",
+            "ich will am {date} eine Buchung für {assistants} um {time} machen",
+            "ich will am {date} eine Buchung um {time} machen",
+            "ich will am {date} eine Buchung um {time} für {assistants} machen",
+            "ich will am {date} eine Buchung um {time} für {assistants} Personen machen",
+            "ich will am {date} um {time} eine Buchung machen",
+            "ich will am {date} um {time} eine Buchung für {assistants} machen",
+            "ich will am {date} um {time} eine Buchung für {assistants} Personen machen",
+            "ich will um {time} eine Buchung machen",
+            "ich will um {time} eine Buchung für {assistants} machen",
+            "ich will um {time} eine Buchung für {assistants} Personen machen",
+            "ich will um {time} eine Buchung für {assistants} Personen am {date} machen",
+            "ich will um {time} eine Buchung für {assistants} am {date} machen",
+            "ich will um {time} eine Buchung am {date} machen",
+            "ich will um {time} am {date} eine Buchung machen",
+            "ich will um {time} am {date} eine Buchung für {assistants} machen",
+            "ich will um {time} am {date} eine Buchung für {assistants} Personen machen",
+            "ich möchte eine Reservieren auf den Namen {name} machen",
+            "ich möchte eine Reservieren auf {name} machen",
+            "ich möchte eine Reservieren machen",
+            "ich möchte eine Reservieren für {assistants} machen",
+            "ich möchte eine Reservieren für {assistants} Personen machen",
+            "ich möchte eine Reservieren für {assistants} Personen am {date} machen",
+            "ich möchte eine Reservieren für {assistants} Personen am {date} um {time} machen",
+            "ich möchte eine Reservieren für {assistants} Personen um {time} machen",
+            "ich möchte eine Reservieren für {assistants} Personen um {time} am {date} machen",
+            "ich möchte eine Reservieren für {assistants} am {date} machen",
+            "ich möchte eine Reservieren für {assistants} am {date} um {time} machen",
+            "ich möchte eine Reservieren für {assistants} um {time} machen",
+            "ich möchte eine Reservieren für {assistants} um {time} am {date} machen",
+            "ich möchte eine Reservieren am {date} machen",
+            "ich möchte eine Reservieren am {date} für {assistants} machen",
+            "ich möchte eine Reservieren am {date} für {assistants} Personen machen",
+            "ich möchte eine Reservieren am {date} um {time} machen",
+            "ich möchte eine Reservieren am {date} um {time} für {assistants} machen",
+            "ich möchte eine Reservieren am {date} um {time} für {assistants} Personen machen",
+            "ich möchte eine Reservieren um {time} machen",
+            "ich möchte eine Reservieren um {time} für {assistants} machen",
+            "ich möchte eine Reservieren um {time} für {assistants} Personen machen",
+            "ich möchte eine Reservieren um {time} am {date} machen",
+            "ich möchte am {date} eine Reservieren machen",
+            "ich möchte am {date} eine Reservieren für {assistants} machen",
+            "ich möchte am {date} eine Reservieren für {assistants} Personen machen",
+            "ich möchte am {date} eine Reservieren für {assistants} Personen um {time} machen",
+            "ich möchte am {date} eine Reservieren für {assistants} um {time} machen",
+            "ich möchte am {date} eine Reservieren um {time} machen",
+            "ich möchte am {date} eine Reservieren um {time} für {assistants} machen",
+            "ich möchte am {date} eine Reservieren um {time} für {assistants} Personen machen",
+            "ich möchte am {date} um {time} eine Reservieren machen",
+            "ich möchte am {date} um {time} eine Reservieren für {assistants} machen",
+            "ich möchte am {date} um {time} eine Reservieren für {assistants} Personen machen",
+            "ich möchte um {time} eine Reservieren machen",
+            "ich möchte um {time} eine Reservieren für {assistants} machen",
+            "ich möchte um {time} eine Reservieren für {assistants} Personen machen",
+            "ich möchte um {time} eine Reservieren für {assistants} Personen am {date} machen",
+            "ich möchte um {time} eine Reservieren für {assistants} am {date} machen",
+            "ich möchte um {time} eine Reservieren am {date} machen",
+            "ich möchte um {time} am {date} eine Reservieren machen",
+            "ich möchte um {time} am {date} eine Reservieren für {assistants} machen",
+            "ich möchte um {time} am {date} eine Reservieren für {assistants} Personen machen",
+            "ich will eine Reservieren auf den Namen {name} machen",
+            "ich will eine Reservieren auf {name} machen",
+            "ich will eine Reservieren machen",
+            "ich will eine Reservieren für {assistants} machen",
+            "ich will eine Reservieren für {assistants} Personen machen",
+            "ich will eine Reservieren für {assistants} Personen am {date} machen",
+            "ich will eine Reservieren für {assistants} Personen am {date} um {time} machen",
+            "ich will eine Reservieren für {assistants} Personen um {time} machen",
+            "ich will eine Reservieren für {assistants} Personen um {time} am {date} machen",
+            "ich will eine Reservieren für {assistants} am {date} machen",
+            "ich will eine Reservieren für {assistants} am {date} um {time} machen",
+            "ich will eine Reservieren für {assistants} um {time} machen",
+            "ich will eine Reservieren für {assistants} um {time} am {date} machen",
+            "ich will eine Reservieren am {date} machen",
+            "ich will eine Reservieren am {date} für {assistants} machen",
+            "ich will eine Reservieren am {date} für {assistants} Personen machen",
+            "ich will eine Reservieren am {date} um {time} machen",
+            "ich will eine Reservieren am {date} um {time} für {assistants} machen",
+            "ich will eine Reservieren am {date} um {time} für {assistants} Personen machen",
+            "ich will eine Reservieren um {time} machen",
+            "ich will eine Reservieren um {time} für {assistants} machen",
+            "ich will eine Reservieren um {time} für {assistants} Personen machen",
+            "ich will eine Reservieren um {time} am {date} machen",
+            "ich will am {date} eine Reservieren machen",
+            "ich will am {date} eine Reservieren für {assistants} machen",
+            "ich will am {date} eine Reservieren für {assistants} Personen machen",
+            "ich will am {date} eine Reservieren für {assistants} Personen um {time} machen",
+            "ich will am {date} eine Reservieren für {assistants} um {time} machen",
+            "ich will am {date} eine Reservieren um {time} machen",
+            "ich will am {date} eine Reservieren um {time} für {assistants} machen",
+            "ich will am {date} eine Reservieren um {time} für {assistants} Personen machen",
+            "ich will am {date} um {time} eine Reservieren machen",
+            "ich will am {date} um {time} eine Reservieren für {assistants} machen",
+            "ich will am {date} um {time} eine Reservieren für {assistants} Personen machen",
+            "ich will um {time} eine Reservieren machen",
+            "ich will um {time} eine Reservieren für {assistants} machen",
+            "ich will um {time} eine Reservieren für {assistants} Personen machen",
+            "ich will um {time} eine Reservieren für {assistants} Personen am {date} machen",
+            "ich will um {time} eine Reservieren für {assistants} am {date} machen",
+            "ich will um {time} eine Reservieren am {date} machen",
+            "ich will um {time} am {date} eine Reservieren machen",
+            "ich will um {time} am {date} eine Reservieren für {assistants} machen",
+            "ich will um {time} am {date} eine Reservieren für {assistants} Personen machen",
+            "ich möchte eine Reservieren auf den Namen {name} tätigen",
+            "ich möchte eine Reservieren auf {name} tätigen",
+            "ich möchte eine Reservieren tätigen",
+            "ich möchte eine Reservieren für {assistants} tätigen",
+            "ich möchte eine Reservieren für {assistants} Personen tätigen",
+            "ich möchte eine Reservieren für {assistants} Personen am {date} tätigen",
+            "ich möchte eine Reservieren für {assistants} Personen am {date} um {time} tätigen",
+            "ich möchte eine Reservieren für {assistants} Personen um {time} tätigen",
+            "ich möchte eine Reservieren für {assistants} Personen um {time} am {date} tätigen",
+            "ich möchte eine Reservieren für {assistants} am {date} tätigen",
+            "ich möchte eine Reservieren für {assistants} am {date} um {time} tätigen",
+            "ich möchte eine Reservieren für {assistants} um {time} tätigen",
+            "ich möchte eine Reservieren für {assistants} um {time} am {date} tätigen",
+            "ich möchte eine Reservieren am {date} tätigen",
+            "ich möchte eine Reservieren am {date} für {assistants} tätigen",
+            "ich möchte eine Reservieren am {date} für {assistants} Personen tätigen",
+            "ich möchte eine Reservieren am {date} um {time} tätigen",
+            "ich möchte eine Reservieren am {date} um {time} für {assistants} tätigen",
+            "ich möchte eine Reservieren am {date} um {time} für {assistants} Personen tätigen",
+            "ich möchte eine Reservieren um {time} tätigen",
+            "ich möchte eine Reservieren um {time} für {assistants} tätigen",
+            "ich möchte eine Reservieren um {time} für {assistants} Personen tätigen",
+            "ich möchte eine Reservieren um {time} am {date} tätigen",
+            "ich möchte am {date} eine Reservieren tätigen",
+            "ich möchte am {date} eine Reservieren für {assistants} tätigen",
+            "ich möchte am {date} eine Reservieren für {assistants} Personen tätigen",
+            "ich möchte am {date} eine Reservieren für {assistants} Personen um {time} tätigen",
+            "ich möchte am {date} eine Reservieren für {assistants} um {time} tätigen",
+            "ich möchte am {date} eine Reservieren um {time} tätigen",
+            "ich möchte am {date} eine Reservieren um {time} für {assistants} tätigen",
+            "ich möchte am {date} eine Reservieren um {time} für {assistants} Personen tätigen",
+            "ich möchte am {date} um {time} eine Reservieren tätigen",
+            "ich möchte am {date} um {time} eine Reservieren für {assistants} tätigen",
+            "ich möchte am {date} um {time} eine Reservieren für {assistants} Personen tätigen",
+            "ich möchte um {time} eine Reservieren tätigen",
+            "ich möchte um {time} eine Reservieren für {assistants} tätigen",
+            "ich möchte um {time} eine Reservieren für {assistants} Personen tätigen",
+            "ich möchte um {time} eine Reservieren für {assistants} Personen am {date} tätigen",
+            "ich möchte um {time} eine Reservieren für {assistants} am {date} tätigen",
+            "ich möchte um {time} eine Reservieren am {date} tätigen",
+            "ich möchte um {time} am {date} eine Reservieren tätigen",
+            "ich möchte um {time} am {date} eine Reservieren für {assistants} tätigen",
+            "ich möchte um {time} am {date} eine Reservieren für {assistants} Personen tätigen",
+            "ich will eine Reservieren auf den Namen {name} tätigen",
+            "ich will eine Reservieren auf {name} tätigen",
+            "ich will eine Reservieren tätigen",
+            "ich will eine Reservieren für {assistants} tätigen",
+            "ich will eine Reservieren für {assistants} Personen tätigen",
+            "ich will eine Reservieren für {assistants} Personen am {date} tätigen",
+            "ich will eine Reservieren für {assistants} Personen am {date} um {time} tätigen",
+            "ich will eine Reservieren für {assistants} Personen um {time} tätigen",
+            "ich will eine Reservieren für {assistants} Personen um {time} am {date} tätigen",
+            "ich will eine Reservieren für {assistants} am {date} tätigen",
+            "ich will eine Reservieren für {assistants} am {date} um {time} tätigen",
+            "ich will eine Reservieren für {assistants} um {time} tätigen",
+            "ich will eine Reservieren für {assistants} um {time} am {date} tätigen",
+            "ich will eine Reservieren am {date} tätigen",
+            "ich will eine Reservieren am {date} für {assistants} tätigen",
+            "ich will eine Reservieren am {date} für {assistants} Personen tätigen",
+            "ich will eine Reservieren am {date} um {time} tätigen",
+            "ich will eine Reservieren am {date} um {time} für {assistants} tätigen",
+            "ich will eine Reservieren am {date} um {time} für {assistants} Personen tätigen",
+            "ich will eine Reservieren um {time} tätigen",
+            "ich will eine Reservieren um {time} für {assistants} tätigen",
+            "ich will eine Reservieren um {time} für {assistants} Personen tätigen",
+            "ich will eine Reservieren um {time} am {date} tätigen",
+            "ich will am {date} eine Reservieren tätigen",
+            "ich will am {date} eine Reservieren für {assistants} tätigen",
+            "ich will am {date} eine Reservieren für {assistants} Personen tätigen",
+            "ich will am {date} eine Reservieren für {assistants} Personen um {time} tätigen",
+            "ich will am {date} eine Reservieren für {assistants} um {time} tätigen",
+            "ich will am {date} eine Reservieren um {time} tätigen",
+            "ich will am {date} eine Reservieren um {time} für {assistants} tätigen",
+            "ich will am {date} eine Reservieren um {time} für {assistants} Personen tätigen",
+            "ich will am {date} um {time} eine Reservieren tätigen",
+            "ich will am {date} um {time} eine Reservieren für {assistants} tätigen",
+            "ich will am {date} um {time} eine Reservieren für {assistants} Personen tätigen",
+            "ich will um {time} eine Reservieren tätigen",
+            "ich will um {time} eine Reservieren für {assistants} tätigen",
+            "ich will um {time} eine Reservieren für {assistants} Personen tätigen",
+            "ich will um {time} eine Reservieren für {assistants} Personen am {date} tätigen",
+            "ich will um {time} eine Reservieren für {assistants} am {date} tätigen",
+            "ich will um {time} eine Reservieren am {date} tätigen",
+            "ich will um {time} am {date} eine Reservieren tätigen",
+            "ich will um {time} am {date} eine Reservieren für {assistants} tätigen",
+            "ich will um {time} am {date} eine Reservieren für {assistants} Personen tätigen"
+          ]
+        },
+        {
+          "name": "ReadMenuIntent",
+          "slots": [
+            {
+              "name": "filter",
+              "type": "YesNo",
+              "samples": [
+                "{filter} bitte",
+                "{filter} danke",
+                "{filter} ich möchte die Speisekarte nicht filtern lassen",
+                "{filter} ich möchte die Speisekarte filtern lassen",
+                "{filter}"
+              ]
+            },
+            {
+              "name": "filterCategory",
+              "type": "FilterCategories",
+              "samples": [
+                "ich will nach {filterCategory} filtern",
+                "nach {filterCategory}",
+                "filter nach {filterCategory}",
+                "ich möchte nach {filterCategory} filtern",
+                "{filterCategory}"
+              ]
+            },
+            {
+              "name": "isDone",
+              "type": "YesNo"
+            }
+          ],
+          "samples": [
+            "was gibt es",
+            "was gibt es für Essen",
+            "was gibt es für Speisen",
+            "was gibt es für Gerichte",
+            "was gibt es für {filterCategory}",
+            "welches Essen gibt es",
+            "was für Essen gibt es",
+            "welche Speisen gibt es",
+            "was für Speisen gibt es",
+            "welche Gerichte gibt es",
+            "was für Gerichte gibt es",
+            "was gibt es zu essen",
+            "welche {filterCategory} gibt es",
+            "was für {filterCategory} gibt es",
+            "lies die Speisekarte vor",
+            "lies die Gerichte vor",
+            "lies die Speisen vor",
+            "lies das Essen vor",
+            "lies die {filterCategory} vor",
+            "lies alle {filterCategory} vor",
+            "Speisekarte vorlesen",
+            "Speisekarte ausgeben",
+            "Gerichte vorlesen",
+            "Gerichte ausgeben",
+            "Speisen vorlesen",
+            "Speisen ausgeben",
+            "Essen vorlesen",
+            "Essen ausgeben",
+            "{filterCategory} vorlesen",
+            "{filterCategory} ausgeben",
+            "was steht auf der Speisekarte",
+            "welche Gerichte stehen auf der Speisekarte",
+            "was für Gerichte stehen auf der Speisekarte",
+            "welches Essen steht auf der Speisekarte",
+            "was für Essen steht auf der Speisekarte",
+            "welche Speisen stehen auf der Speisekarte",
+            "was für Speisen stehen auf der Speisekarte",
+            "welche {filterCategory} stehen auf der Speisekarte",
+            "was für {filterCategory} stehen auf der Speisekarte",
+            "was kann ich bestellen",
+            "welche Gerichte kann ich bestellen",
+            "was für Gerichte kann ich bestellen",
+            "welche Speisen kann ich bestellen",
+            "was für Speisen kann ich bestellen",
+            "welches Essen kann ich bestellen",
+            "was für Essen kann ich bestellen",
+            "welche {filterCategory} kann ich bestellen",
+            "was für {filterCategory} kann ich bestellen",
+            "was kann ich essen",
+            "welche Gerichte kann ich essen",
+            "was für Gerichte kann ich essen",
+            "welche Speisen kann ich essen",
+            "was für Speisen kann ich essen",
+            "welche {filterCategory} kann ich essen",
+            "was für {filterCategory} kann ich essen",
+            "gib die Speisekarte aus",
+            "gib alle Gerichte aus",
+            "lies alle Gerichte vor",
+            "gib alle {filterCategory} aus",
+            "gib die {filterCategory} aus",
+            "ich möchte die Speisekarte vorlesen lassen",
+            "ich möchte die Speisen vorlesen lassen",
+            "ich möchte alle Speisen vorlesen lassen",
+            "ich möchte alle Gerichte vorlesen lassen",
+            "ich möchte die Gerichte vorlesen lassen",
+            "ich möchte das Essen vorlesen lassen",
+            "ich möchte die {filterCategory} vorlesen lassen",
+            "ich möchte alle {filterCategory} vorlesen lassen",
+            "ich möchte die Speisekarte ausgeben lassen",
+            "ich möchte die Speisen ausgeben lassen",
+            "ich möchte alle Speisen ausgeben lassen",
+            "ich möchte alle Gerichte ausgeben lassen",
+            "ich möchte die Gerichte ausgeben lassen",
+            "ich möchte das Essen ausgeben lassen",
+            "ich möchte die {filterCategory} ausgeben lassen",
+            "ich möchte alle {filterCategory} ausgeben lassen",
+            "ich will die Speisekarte vorlesen lassen",
+            "ich will die Speisen vorlesen lassen",
+            "ich will alle Speisen vorlesen lassen",
+            "ich will alle Gerichte vorlesen lassen",
+            "ich will die Gerichte vorlesen lassen",
+            "ich will das Essen vorlesen lassen",
+            "ich will die {filterCategory} vorlesen lassen",
+            "ich will alle {filterCategory} vorlesen lassen",
+            "ich will die Speisekarte ausgeben lassen",
+            "ich will die Speisen ausgeben lassen",
+            "ich will alle Speisen ausgeben lassen",
+            "ich will alle Gerichte ausgeben lassen",
+            "ich will die Gerichte ausgeben lassen",
+            "ich will das Essen ausgeben lassen",
+            "ich will die {filterCategory} ausgeben lassen",
+            "ich will alle {filterCategory} ausgeben lassen"
+          ]
+        },
+        {
+          "name": "OrderFoodIntent",
+          "slots": [
+            {
+              "name": "where",
+              "type": "InhouseOrDelivery",
+              "samples": [
+                "ich möchte {where} essen",
+                "ich möchte im {where} essen",
+                "{where}"
+              ]
+            },
+            {
+              "name": "correctBooking",
+              "type": "YesNo"
+            }
+          ],
+          "samples": [
+            "ich möchte Essen bestellen",
+            "ich möchte Essen {where} bestellen",
+            "ich möchte Essen für {where} bestellen",
+            "ich möchte für {where} Essen bestellen",
+            "ich will Essen bestellen",
+            "ich will Essen {where} bestellen",
+            "ich will Essen für {where} bestellen",
+            "ich will für {where} Essen bestellen",
+            "Essen bestellen",
+            "Essen {where} bestellen",
+            "Essen für {where} bestellen",
+            "für {where} Essen bestellen",
+            "ich möchte bestellen",
+            "ich möchte {where} bestellen",
+            "ich möchte für {where} bestellen",
+            "ich will bestellen",
+            "ich will {where} bestellen",
+            "ich will für {where} bestellen",
+            "bestellen",
+            "{where} bestellen",
+            "für {where} bestellen",
+            "bestelle Essen",
+            "bestelle {where} Essen",
+            "bestelle für {where} Essen",
+            "bestelle Essen {where}",
+            "bestelle Essen für {where}",
+            "bestelle",
+            "bestelle {where}",
+            "bestelle für {where}",
+            "gib eine Bestellung auf",
+            "gib eine Bestellung {where} auf",
+            "gib eine Bestellung für {where} auf",
+            "gib {where} eine Bestellung auf",
+            "gib für {where} eine Bestellung auf",
+            "gib eine {where} auf",
+            "bitte gib eine Bestellung auf",
+            "bitte gib eine Bestellung {where} auf",
+            "bitte gib eine Bestellung für {where} auf",
+            "bitte gib {where} eine Bestellung auf",
+            "bitte gib für {where} eine Bestellung auf",
+            "bitte gib eine {where} auf",
+            "ich möchte eine Bestellung aufgeben",
+            "ich möchte {where} eine Bestellung aufgeben",
+            "ich möchte für {where} eine Bestellung aufgeben",
+            "ich möchte eine Bestellung {where} aufgeben",
+            "ich möchte eine Bestellung für {where} aufgeben",
+            "ich möchte eine {where} aufgeben",
+            "ich will eine Bestellung aufgeben",
+            "ich will {where} eine Bestellung aufgeben",
+            "ich will für {where} eine Bestellung aufgeben",
+            "ich will eine Bestellung {where} aufgeben",
+            "ich will eine Bestellung für {where} aufgeben",
+            "ich will eine {where} aufgeben",
+            "ich habe Hunger",
+            "ich möchte essen",
+            "ich möchte {where} essen",
+            "ich möchte essen {where}",
+            "ich will essen",
+            "ich will {where} essen",
+            "ich will essen {where}"
+          ]
+        },
+        {
+          "name": "AddDishToOrderIntent",
+          "slots": [
+            {
+              "name": "where",
+              "type": "InhouseOrDelivery"
+            },
+            {
+              "name": "dish",
+              "type": "Dishes",
+              "samples": [
+                "Ich will {count} {dish} bestellen",
+                "Ich will {count} mal {dish} bestellen",
+                "Ich will {count} Portion {dish} bestellen",
+                "{count} Portionen {dish}",
+                "Ich möchte {count} Portion {dish} bestellen",
+                "Ich möchte {count} Portionen {dish} bestellen",
+                "Ich möchte {count} mal {dish} bestellen",
+                "Ich möchte {count} {dish} bestellen",
+                "{count} Portion {dish}",
+                "{count} mal {dish}",
+                "{count} {dish}",
+                "{dish}"
+              ]
+            },
+            {
+              "name": "count",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "für {count} Personen",
+                "für {count}",
+                "{count} Portionen",
+                "{count}",
+                "{count} Mal"
+              ]
+            },
+            {
+              "name": "isCorrect",
+              "type": "YesNo",
+              "samples": [
+                "{isCorrect} das ist nicht richtig",
+                "{isCorrect} das ist richtig",
+                "{isCorrect}"
+              ]
+            },
+            {
+              "name": "whatsWrong",
+              "type": "DishOrCount",
+              "samples": [
+                "{whatsWrong} stimmt nicht",
+                "{whatsWrong}"
+              ]
+            },
+            {
+              "name": "isDone",
+              "type": "YesNo"
+            }
+          ],
+          "samples": []
+        },
+        {
+          "name": "OrderAgainIntent",
+          "slots": [
+            {
+              "name": "where",
+              "type": "InhouseOrDelivery"
+            },
+            {
+              "name": "orderAgain",
+              "type": "YesNo",
+              "samples": [
+                "{orderAgain} ich will nicht noch mehr",
+                "{orderAgain} ich will nicht noch mehr bestellen",
+                "{orderAgain} ich möchte nicht noch mehr",
+                "{orderAgain} ich möchte nicht noch mehr bestellen",
+                "{orderAgain} ich will nichts mehr",
+                "{orderAgain} ich möchte nichts mehr",
+                "{orderAgain} ich möchte mehr",
+                "{orderAgain} ich will mehr",
+                "{orderAgain} ich möchte noch mehr",
+                "{orderAgain} ich will noch mehr",
+                "{orderAgain} ich möchte noch mehr bestellen",
+                "{orderAgain} ich will noch mehr bestellen",
+                "{orderAgain} ich will nichts mehr bestellen",
+                "{orderAgain} ich will noch was bestellen",
+                "{orderAgain} ich will noch etwas bestellen",
+                "{orderAgain} ich möchte nichts mehr bestellen",
+                "{orderAgain} ich möchte noch was bestellen",
+                "{orderAgain} ich möchte noch etwas bestellen",
+                "{orderAgain} bitte",
+                "{orderAgain} gerne",
+                "{orderAgain} das ist genug",
+                "{orderAgain} das reicht",
+                "{orderAgain}"
+              ]
+            }
+          ],
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "0",
+              "name": {
+                "value": "no",
+                "synonyms": [
+                  "später",
+                  "gerade nicht",
+                  "natürlich nicht",
+                  "nein danke",
+                  "auf keinen Fall",
+                  "nein"
+                ]
+              }
+            },
+            {
+              "id": "1",
+              "name": {
+                "value": "yes",
+                "synonyms": [
+                  "ja gerne",
+                  "klar",
+                  "gerne",
+                  "auf jeden Fall",
+                  "logisch",
+                  "yep",
+                  "jap",
+                  "natürlich",
+                  "na klar",
+                  "ja"
+                ]
+              }
+            }
+          ],
+          "name": "YesNo"
+        },
+        {
+          "values": [
+            {
+              "id": "delivery",
+              "name": {
+                "value": "delivery",
+                "synonyms": [
+                  "auf Lieferung",
+                  "hier",
+                  "zuhause",
+                  "bei mir",
+                  "Lieferung",
+                  "zur Lieferung",
+                  "als Lieferung",
+                  "geliefert"
+                ]
+              }
+            },
+            {
+              "id": "inhouse",
+              "name": {
+                "value": "inhouse",
+                "synonyms": [
+                  "dort",
+                  "vor Ort",
+                  "Restaurant",
+                  "im Restaurant"
+                ]
+              }
+            }
+          ],
+          "name": "InhouseOrDelivery"
+        },
+        {
+          "values": [
+            {
+              "id": "-1",
+              "name": {
+                "value": "whichCategory",
+                "synonyms": [
+                  "wonach kann gefiltert werden",
+                  "welche filter gibt es",
+                  "Wonach kann ich filtern?",
+                  "Welche Kategorien gibt es?"
+                ]
+              }
+            },
+            {
+              "id": "7",
+              "name": {
+                "value": "vegetarian",
+                "synonyms": [
+                  "vegetarische Gericht",
+                  "vegetarische Gerichten",
+                  "vegetarische Gerichte",
+                  "vegetarisch"
+                ]
+              }
+            },
+            {
+              "id": "6",
+              "name": {
+                "value": "vegan",
+                "synonyms": [
+                  "vegane Gericht",
+                  "vegane Gerichten",
+                  "vegane Gerichte",
+                  "vegan"
+                ]
+              }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "curry",
+                "synonyms": [
+                  "Currygericht",
+                  "Currygerichten",
+                  "Currygerichte",
+                  "Curry"
+                ]
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                "value": "rice",
+                "synonyms": [
+                  "Reisgericht",
+                  "Reisgerichten",
+                  "Reisgerichte",
+                  "Reis"
+                ]
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "noodles",
+                "synonyms": [
+                  "Nudelgericht",
+                  "Nudelgerichten",
+                  "Nudeln",
+                  "Nudelgerichte"
+                ]
+              }
+            },
+            {
+              "id": "1",
+              "name": {
+                "value": "starter",
+                "synonyms": [
+                  "Vorspeisen",
+                  "Vorspeise"
+                ]
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "dessert",
+                "synonyms": [
+                  "Desserts",
+                  "Nachspeisen",
+                  "Dessert",
+                  "Nachspeise"
+                ]
+              }
+            },
+            {
+              "id": "0",
+              "name": {
+                "value": "maincourse",
+                "synonyms": [
+                  "Hauptgerichte",
+                  "Hauptgerichten",
+                  "Hauptspeisen",
+                  "Hauptspeise",
+                  "Hauptgericht"
+                ]
+              }
+            }
+          ],
+          "name": "FilterCategories"
+        },
+        {
+          "values": [
+            {
+              "id": "5",
+              "name": {
+                "value": "Beer"
+              }
+            },
+            {
+              "id": "6",
+              "name": {
+                "value": "Tea"
+              }
+            },
+            {
+              "id": "1",
+              "name": {
+                "value": "Garlic Paradise Salad"
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                "value": "Thai Thighs Fish/Prawns"
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "Thai Peanut Beef"
+              }
+            },
+            {
+              "id": "0",
+              "name": {
+                "value": "Thai Spicy Basil Fried Rice"
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "Thai Green Chicken Curry"
+              }
+            }
+          ],
+          "name": "Dishes"
+        },
+        {
+          "values": [
+            {
+              "id": "both",
+              "name": {
+                "value": "both",
+                "synonyms": [
+                  "alles",
+                  "beides"
+                ]
+              }
+            },
+            {
+              "id": "count",
+              "name": {
+                "value": "count",
+                "synonyms": [
+                  "die Zahl",
+                  "die Anzahl",
+                  "Zahl",
+                  "Anzahl"
+                ]
+              }
+            },
+            {
+              "id": "dish",
+              "name": {
+                "value": "dish",
+                "synonyms": [
+                  "das Essen",
+                  "das Gericht",
+                  "Essen",
+                  "Gericht"
+                ]
+              }
+            }
+          ],
+          "name": "DishOrCount"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CreateBookingIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.759252667853"
+          },
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.913894182163.825310103606"
+              }
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.913894182163.823177960242"
+              },
+              "validations": [
+                {
+                  "type": "isInDuration",
+                  "prompt": "Slot.Validation.925665062725.604681301031.1063833263129",
+                  "start": "P0D",
+                  "end": ""
+                }
+              ]
+            },
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.913894182163.477234422984"
+              }
+            },
+            {
+              "name": "assistants",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.913894182163.929725039827"
+              },
+              "validations": [
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.1346532108806.1431206760396.1053370863974",
+                  "value": "8"
+                },
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.1346532108806.1431206760396.234486702429",
+                  "value": "1"
+                }
+              ]
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "ReadMenuIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "filter",
+              "type": "YesNo",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.991593518911.94518739077"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1428977083030.1132655530396.384585153073"
+                }
+              ]
+            },
+            {
+              "name": "filterCategory",
+              "type": "FilterCategories",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.430997158964.536304457500"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1492906539938.1570679555653.767977494620"
+                }
+              ]
+            },
+            {
+              "name": "isDone",
+              "type": "YesNo",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        },
+        {
+          "name": "OrderFoodIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "where",
+              "type": "InhouseOrDelivery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.277812850715.1519292275439"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.616922216891.87852583840.1242982354177"
+                }
+              ]
+            },
+            {
+              "name": "correctBooking",
+              "type": "YesNo",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "AddDishToOrderIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "where",
+              "type": "InhouseOrDelivery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "dish",
+              "type": "Dishes",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.17805114169.1293974680120"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.17805114169.1293974680120.565344589099"
+                }
+              ]
+            },
+            {
+              "name": "count",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.64824853362.1230065889652"
+              },
+              "validations": [
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.789909883488.1344816511477.1291113256260",
+                  "value": "1"
+                },
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.789909883488.1344816511477.1358707226961",
+                  "value": "20"
+                }
+              ]
+            },
+            {
+              "name": "isCorrect",
+              "type": "YesNo",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1166730638509.334849778902"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.789909883488.1440655396489.1139825883201"
+                }
+              ]
+            },
+            {
+              "name": "whatsWrong",
+              "type": "DishOrCount",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1166730638509.1205783281094"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.789909883488.556712723185.1563610561184"
+                }
+              ]
+            },
+            {
+              "name": "isDone",
+              "type": "YesNo",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        },
+        {
+          "name": "OrderAgainIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "where",
+              "type": "InhouseOrDelivery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "orderAgain",
+              "type": "YesNo",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.652200678087.572721088453"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.969843180734.1564351819459.689058701651"
+                }
+              ]
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.913894182163.825310103606",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Auf welchen Namen läuft die Buchung?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.913894182163.823177960242",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Für welchen Tag soll der Tisch gebucht werden?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.913894182163.477234422984",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Für welche Uhrzeit soll der Tisch gebucht werden?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.913894182163.929725039827",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Für wie viele Personen ist die Buchung?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.925665062725.604681301031.1063833263129",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Das Buchungsdatum darf nicht in der Vergangenheit liegen. Für welchen Tag soll der Tisch gebucht werden?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1346532108806.1431206760396.1053370863974",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wir bieten nur Tisch für bis zu acht Personen. Für mehr Personen buche einfach zwei Tische. Für wie viele Personen ist die Buchung?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1346532108806.1431206760396.234486702429",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ein Tisch muss für mindestens eine Person gebucht werden. Für wie viele Personen ist die Buchung?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1373517402569.481286955895.973750267056",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Mögliche Antworten sind zum Beispiel ja oder nein. Möchten Sie die Speisekarte filtern lassen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.680821819826.842376436867",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Möchten Sie für inhouse-Verzehr oder zur Lieferung bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.492637391886.854560967503",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Möchten Sie auf diese Buchung bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.277812850715.1519292275439",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Möchtest du im Restaurant essen oder dein Essen geliefert bekommen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.64824853362.1230065889652",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wie oft möchtest du {dish} bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.64824853362",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ich werde {count} Mal die Nummer {dish} bestellen. Ist das richtig?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.430997158964.536304457500",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wonach möchtest du filtern?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.991593518911.94518739077",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Möchtest du die Speisekarte filtern lassen?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.561155533611.1610665388441.800587737518",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Das ist leider keine gültige Filterkategorie. Mögliche Kategorien sind Hauptgerichte, Vorspeisen, Desserts, Nudeln, Reis, Curry, Vegan und Vegetarisch. Wonach möchten Sie filtern?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.561155533611.1610665388441",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": " Mögliche Kategorien sind Hauptgerichte, Vorspeisen, Desserts, Nudeln, Reis, Curry, Vegan und Vegetarisch. Wonach möchten Sie filtern?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.652200678087.572721088453",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Möchtest du noch etwas bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.314472051366",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "test"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.787798034939",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "blah"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.807956158679.563302797154",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "abc"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.410365300824.554126023277",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Was möchtest du bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.410365300824.310781181289",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wie oft möchtest du {dish} bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.410365300824.310781181289",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ich füge der Bestellung {count} mal {dish} hinzu, ist das richtig?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.759252667853",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ich buche einen Tisch für {assistants} auf den Namen {name} am {date} um {time} , ist das richtig?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1005515200003.762249410018.1548114240625",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dieses Gericht bieten wir leider nicht an. Sie können sich auch unsere Karte ausgeben lassen. Was möchten Sie bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.17805114169.1293974680120",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Was möchtest du bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.17805114169.1293974680120.565344589099",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dieses Gericht bieten wir leider nicht an. Du kannst dir auch unsere Karte vorlesen lassen. Was möchtest du bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.4504044678.800874819865",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "bla"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1166730638509.334849778902",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ich bestelle {count} mal {dish} , ist das richtig?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1166730638509.1205783281094",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Stimmt das Gericht, die Anzahl oder beides nicht?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1492906539938.1570679555653.767977494620",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Das ist leider keine gültige Filterkategorie. Mögliche Kategorien sind Hauptgericht, Vorspeise, Desserts, Nudeln, Reis, Curry, Vegan und Vegetarisch. Wonach möchtest du filtern?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.616922216891.87852583840.1242982354177",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Das habe ich leider nicht verstanden. Antworte bitte im Restaurant oder als Lieferung."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1428977083030.1132655530396.384585153073",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Entschuldigung, das habe ich nicht verstanden. Antworte bitte mit zum Beispiel Ja oder Nein."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.789909883488.1344816511477.1291113256260",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Für eine gültige Bestellung musst du mindestens ein Gericht bestellen. Wie oft möchtest du {dish} bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.789909883488.1344816511477.1358707226961",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Um Fehler zu vermeiden kann man maximal zwanzig Mal auf einmal dasselbe Gericht bestellen. Wie oft möchtest du {dish} bestellen?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.789909883488.556712723185.1563610561184",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Entschuldigung, das habe ich nicht verstanden. Stimmt das Gericht, die Anzahl oder beides nicht?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.789909883488.1440655396489.1139825883201",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Entschuldigung, das habe ich nicht verstanden. Antworte bitte zum Beispiel mit ja oder nein."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.969843180734.1564351819459.689058701651",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Entschuldigung, das habe ich nicht verstanden. Antworte bitte zum Beispiel mit ja oder nein."
+          }
+        ]
+      }
+    ]
+  },
+  "version": "138"
+}

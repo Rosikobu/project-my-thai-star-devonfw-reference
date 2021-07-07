@@ -1,0 +1,21 @@
+.btn-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .left-btn { 
+    display: flex;
+    flex: 1;
+    justify-content: flex-start; 
+}
+  .right-btn { display: flex;
+    flex: 1;
+    justify-content: flex-end; }
+.dialog-header{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+}
+.dialog-body{
+padding: 10px;
+margin: 10px;
+}

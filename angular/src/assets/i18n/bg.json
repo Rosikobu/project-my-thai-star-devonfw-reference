@@ -1,0 +1,277 @@
+{
+  "buttons": {
+    "cancel": "Отмени",
+    "close": "Затвори",
+    "send": "Изпрати",
+    "login": "Вход",
+    "register": "Регистрация",
+    "bookTable": "Запази маса",
+    "inviteFriends": "Покани приятели",
+    "viewMenu": "Виж меню",
+    "addToOrder": "Добави към поръчка",
+    "clearFilters": "Изчисти филтри",
+    "applyFilters": "Приложи филтри",
+    "removeComment": "Изтрий коментар",
+    "addComment": "Добави коментар",
+    "cancelOrder" : "Анулиране на поръчка",
+    "reactivateOrder" : "Реактивирайте поръчката",
+    "addUser" : "Добавете потребители",
+    "copyBookingId": "Копирайте номера на резервацията",
+    "updateUserInformation": "Актуализирайте информацията за потребителя",
+    "deleteUser": "Изтриване на потребител",
+    "updatePassword": "Актуализирайте паролата",
+    "sendResetLink": "Изпращане на връзката за нулиране"
+  },
+  "table": {
+    "rowsPage": "Редове на страница",
+    "of": "на/от",
+    "noResults": "Няма намерени резултати"
+  },
+  "alerts": {
+    "updateOrderStatusSuccess" : "Състоянието беше променено успешно",
+    "updateOrderStatusFail" : "Промяната на състоянието не бе успешна",
+    "cancelOrderSuccess" : "Поръчката беше успешно отменена",
+    "cancelOrderFail" : "Анулирането на поръчката не бе успешно",
+    "reactivateOrderSuccess" : "Поръчката беше успешно активирана отново",
+    "accessError":
+      "Достъп отказан, моля първо влез с потребителско име и парола",
+    "genericError": "Грешка, моля опитай по-късно",
+    "urlError": "Не е намерен Url, моля опитай отново",
+    "email confirmations": {
+      "invitationAccept": "Поканата е приета усрешно",
+      "invitationReject": " Поканата е отхвърлена усрешно ",
+      "bookingCancel": " Резервацията е отменена усрешно ",
+      "orderCancel": "Поръчката е отменена усрешно "
+    },
+    "orderID":
+      "За да поръчаш меню е необходимо да получиш номер на резервация. Или въведи номера на съществуваща резервация или запази маса",
+    "passwordError": "Грешна парола",
+    "authAlerts": {
+      "loginSuccess": "Успешно влизане",
+      "registerSuccess": "Успешна регистрация",
+      "registerFail": " Неуспешна регистрация, потребителското име съществува",
+      "logoutSuccess": "Успешно излизане от профила, до скоро!"
+    }
+  },
+  "formFields": {
+    "username": "Потребителско име",
+    "password": "Парола",
+    "confirmPassword": "Потвърди парола",
+    "date": "Дата",
+    "name": "Име",
+    "email": "Email",
+    "assistants": "Присъстващи",
+    "friends": "Приятели",
+    "terms": "Приеми условията",
+    "dateTime": "Дата и час",
+    "guests": "Гости",
+    "guestsPH": "Въведи email покана",
+    "comment": "Коментар",
+    "total": "Общо",
+    "referenceNumber": "Номер за справка"
+  },
+  "bookTable": {
+    "title": "Можеш да поканиш твоите приятели на обяд или да запазиш маса",
+    "bookTabImage": "Някои от ястията, които можете да намерите в нашия ресторант",
+    "bookingTab": "Запази маса",
+    "reservationTab": "Покани приятели",
+    "reservationTabImage": "Нашите клиенти се наслаждават на услугите на нашия ресторант",
+    "bookingTitle": "Запази твоята маса",
+    "bookingSubtitle": "Можеш да запазиш маса и да поръчаш меню",
+    "reservationTitle": "Добави твоята информация и приятели",
+    "dialog": {
+      "title": "Запази маса",
+      "bookingSuccess": "Масата е запазена успешно",
+      "bookingError": "Грешка при резервацията, моля опитай по-късно",
+      "bookingId": "номер на резервация",
+      "bookingIdTooltip": "Добавете номера на резервацията в пазарската количка, за да завършите поръчка"
+    },
+    "formErrors": {
+      "nameRequired": "Задължително. Моля въведи име, за да запазиш маса",
+      "emailRequired": " Задължително. Моля въведи email, за да запазиш маса ",
+      "emailPattern":
+        "Въведи валиден email адреср за да изпратиш информация за резезервацията. Например email@email.com.",
+      "emailFormat": "Невалиден Email формат",
+      "assistantsRequired": " Задължително. Моля въведи брой на присъстващи.",
+      "assistantsMax":
+        "Не можеш да въведеш повече присъстващи от максималният брой на най–голямата маса (8), ако имаш нужда от повече маси, направи повече резервации.",
+      "assistantsMin":
+        "Не можеш да резервираш без да въведеш или ако  въведеш отрицателен брой присъстващи"
+    }
+  },
+  "main": {
+    "home": "Начало",
+    "menu": "Меню",
+    "book": "Запази маса",
+    "orders": "Поръчки",
+    "reservations": "Резервации",
+    "archiv" : "архив",
+    "users" : "Списък с потребители",
+    "prediction" : "прогнозиране",
+    "clustering" : "клъстериране",
+    "userActions": {
+      "user": "Потребител",
+      "pairing": "Задайте двуфакторно удостоверяване",
+      "logout": "Изход",
+      "changePassword": "Смени парола",
+      "twitterAccount": "Twitter акаунт",
+      "signOut": "Изход",
+      "orders": "Поръчки"
+    }
+  },
+  "home": {
+    "subtitle": "Повече от просто вкусна храна",
+    "restaurantTitle": "Нашият ресторрант",
+    "restaurantImage":"Един от нашите клиенти чете книга, докато се наслаждава на храната си",
+    "restaurantContent":
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum tellus eget volutpat porta. Duis pellentesque velit venenatis, tincidunt ligula ac, rhoncus felis. Donec aliquam nulla id turpis dignissim laoreet. Vestibulum sit amet ante eu lacus convallis lobortis sit amet eu orci. Nam vitae felis ac nisi accumsan faucibus.",
+    "menuTitle": "Нашето меню",
+    "menuImage": "В нашето меню ще намерите редица вкусни ястия, от които да избирате",
+    "menuContent":
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum tellus eget volutpat porta. Duis pellentesque velit venenatis, tincidunt ligula ac, rhoncus felis. Donec aliquam nulla id turpis dignissim laoreet. Vestibulum sit amet ante eu lacus convallis lobortis sit amet eu orci. Nam vitae felis ac nisi accumsan faucibus."
+  },
+  "menu": {
+    "filterTitle": "ФИЛТРИ",
+    "filter": {
+      "search": "Разгледай нашите ястия",
+      "sort": "Подреди по",
+      "price": "Цена",
+      "likes": "Харесвания",
+      "name": "Име",
+      "mainDishes": "Основни ястия",
+      "starters": "Предястия",
+      "desserts": "Десерти",
+      "noodle": "Нудълс",
+      "rice": "Ориз",
+      "curry": "Къри",
+      "vegan": "Веган",
+      "vegetarian": "Вегетарянски",
+      "favourites": "Фаворити"
+    }
+  },
+  "sidenav": {
+    "title": "Продължи резервацията",
+    "header": "Поръчай меню",
+    "bookingId": "Номер на резервация",
+    "noSelection": "Няма избрана поръчка",
+    "dialog": {
+      "title": "Добави коментар",
+      "content":
+        "Тук можеш да добавиш кратък коментар към нашите готвачи относно как да приготвят твоето ястие"
+    }
+  },
+  "userArea": {
+    "loginTitle": "РЕГИСТРАЦИЯ",
+    "signupTitle": "ЗАПИСВАНЕ",
+    "emailError": "Моля, въведи валиден email адрес",
+    "passwordDialog": {
+      "title": "Създай нова Парола",
+      "currentPassword": "Актуална Парола",
+      "newPassword": "Нова парола",
+      "verifyPassword": "Провери парола"
+    },
+    "twitterDialog": {
+      "title": "Свържи Twitter акаунт",
+      "twitterUsernamePH": "Twitter потребителско име",
+      "twitterPasswordPH": "Twitter парола",
+      "loginbutton": "Влез в Twitter"
+    },
+    "qrcodeDialog": {
+      "twofactorNotFound": "Двуфакторното удостоверяване все още не е активирано",
+      "twofactorTitle": "Настройки за двуфакторно удостоверяване",
+      "twofactorStatus": "Състояние на двуфакторното удостоверяване",
+      "twofactorDescription": "Моля, сканирайте QR кода с Google Authenticator или използвайте тайния ключ",
+      "twofactorclose": "Затворете прозореца",
+      "qrSwitchText": "QR код",
+      "secretSwitchText": "Тайният ключ"
+    }
+  },
+  "cockpit": {
+    "filter": "Филтър",
+    "orders": {
+      "title": "Поръчки",
+      "dialogTitle": " ДЕТАЙЛИ НА ПОРЪЧКАТА - НОМЕР НА ПОРЪЧКА",
+      "dialogTable": {
+        "dishH": "Ястие",
+        "commentsH": "Коментари",
+        "extrasH": "Допълнително",
+        "quantityH": "Количество",
+        "priceH": "Цена"
+      }
+    },
+    "reservations": {
+      "title": "Резервации",
+      "dialogTitle": "ДЕТАЙЛИ НА РЕЗЕРВАЦИЯТА – НОМЕР НА РЕЗЕРВАЦИЯ",
+      "dialogTable": {
+        "guestEmailH": "Еmail на госта",
+        "acceptanceH": "Потвърждения и откази",
+        "assistantsH": "Присъстващи"
+      }
+    },
+    "table": {
+      "reservationDateH": "Дата на резервация",
+      "tableIdH": "Номер на таблицата",
+      "emailH": "Email",
+      "bookingTokenH": "Номер на резервация",
+      "ownerH": "Създател",
+      "tableH": "маса",
+      "paymentStatusH": "Статус на плащането",
+      "paymentStatusPaid": "платени",
+      "paymentStatusNotPaid": "Неплатено плащане",
+      "creationDateH": "Дата на създаване",
+      "statusH" : "статус",
+      "statusDelivered" : "Храната пристигна",
+      "statusTaken" :"Поръчката взета",
+      "statusPrepared": "Приготвя се храна",
+      "statusInDelivery":"Доставя се храна",
+      "cancelH": "Отказ",
+      "reactivateH": "Повторно активиране"
+    },
+    "userTable": {
+      "userName" : "Потребителско име",
+      "userRole" : "Потребителска роля",
+      "id" : "Идентификационен номер",
+      "emailH": "електронна поща"
+    }
+  },
+  "userManagement": {
+    "createUser" : "Създайте нов потребител",
+    "userRole" : "Потребителска роля",
+    "roleCustomer" : "клиент",
+    "roleWaiter" : "Сервитьор",
+    "roleManager" : "Мениджър",
+    "roleAdmin" : "Администратор",
+    "managePassword": "Управление на паролата",
+    "formErrors" : {
+      "addUserNameRequired" : "Задължително поле. Моля, въведете потребителско име.",
+      "addUserEmailRequired" : "Задължително поле. Моля, въведете имейл.",
+      "addUserEmailPattern" : "Въведете валиден имейл адрес, например email@email.com.",
+      "passwordRequiredPrompt" : "Задължително поле. Моля, въведете парола.",
+      "passwordMatchPrompt": "Паролите не съвпадат."
+    },
+    "userInformation": {
+      "userInformation": "Информация за потребителя",
+      "userName": "Потребителско име",
+      "userEmail": "Имейл на потребителя"
+    },
+    "userManagement":{
+      "usernameH": "Потребителско име:",
+      "emailH": "Електронна поща:",
+      "password": "парола",
+      "repeatPassword": "Повтори паролата",
+      "updatePassword": "Актуализирайте потребителската парола",
+      "resetLink": "Изпращане на връзката за нулиране",
+      "updateSuccess": "Актуализацията на потребителските данни беше успешна",
+      "updateFail": "Актуализацията на потребителските данни е неуспешна",
+      "createUserSuccess": "Потребителят е създаден успешно",
+      "createUserFail": "Създаването на потребителя не бе успешно",
+      "deleteUserSuccess": "Потребителят беше изтрит успешно",
+      "deleteUserFail": "Изтриването на потребителя не бе успешно",
+      "confirmText1" : "Сигурни ли сте, че искате да изтриете потребителя '",
+      "confirmText2" : "' ?",
+      "checkLink": "Проверка на връзката ...",
+      "redirect": "скоро ще бъдете пренасочени",
+      "wait": "Моля Изчакай"
+    }
+  }
+}

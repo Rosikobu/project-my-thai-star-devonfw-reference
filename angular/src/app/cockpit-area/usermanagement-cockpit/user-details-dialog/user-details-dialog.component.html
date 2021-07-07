@@ -1,0 +1,71 @@
+<mat-tab-group mat-stretch-tabs>
+    <mat-tab label="{{'userManagement.userInformation.userInformation' | transloco}}" class="UserInfoTab">
+        <div class="float-container">
+            <div class="float-child">
+                <form [formGroup]="Form" (ngSubmit)="onSubmit()">
+                    <p>
+                        <mat-form-field appearance="outline" class="matfield">
+                            <mat-label>{{'userManagement.userInformation.userName' | transloco}}</mat-label>
+                            <input matInput value="{{userInfo.username}}" formControlName="username">
+                            <mat-icon matSuffix>person_outline</mat-icon>
+                            <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+                                <div *ngIf="username.errors.required">
+                                    {{'userManagement.formErrors.addUserNameRequired' | transloco}}
+                                </div>
+                            </mat-error>
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline" class="matfield">
+                            <mat-label>{{'userManagement.userInformation.userEmail' | transloco}}</mat-label>
+                            <input matInput value="{{userInfo.email}}" formControlName="email">
+                            <mat-icon matSuffix>email</mat-icon>
+                            <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+                                <div *ngIf="email.errors.required">
+                                    {{'userManagement.formErrors.addUserEmailRequired' | transloco}}
+                                </div>
+                                <div *ngIf="email.errors.pattern">
+                                    {{'userManagement.formErrors.addUserEmailPattern' | transloco}}
+                                </div>
+                            </mat-error>
+
+                        </mat-form-field>
+                    </p>
+                    <p class="ng-hide">
+                        <mat-form-field appearance="outline" class="matfield">
+                            <mat-label class="col-sm-2 col-form-label">{{'userManagement.userRole' | transloco}}
+                            </mat-label>
+                            <mat-select value="{{userInfo.userRoleId}}" placeholder="{{userInfo.userRoleId}}"
+                                formControlName="userRoleId">
+                                <mat-option value="0">{{'userManagement.roleCustomer' | transloco}}</mat-option>
+                                <mat-option value="1">{{'userManagement.roleWaiter' | transloco}}</mat-option>
+                                <mat-option value="2">{{'userManagement.roleManager' | transloco}}</mat-option>
+                                <mat-option value="3">{{'userManagement.roleAdmin' | transloco}}</mat-option>
+                            </mat-select>
+                            <mat-icon matSuffix>account_circle</mat-icon>
+                        </mat-form-field>
+                    </p>
+                    <div class="btn-toolbar">
+                        <div class="left-btn">
+                            <button mat-button type="submit" mat-dialog-close color="accent" [disabled]="!Form.valid">
+                                <mat-icon matSuffix>update</mat-icon>{{'buttons.updateUserInformation' | transloco}}
+                            </button>
+                            <button mat-stroked-button type="button" color="warn" (click)="deleteUser()">
+                                <mat-icon matSuffix>
+                                    <span class="material-icons-outlined">
+                                        delete_forever
+                                    </span>
+                                </mat-icon>{{'buttons.deleteUser' | transloco}}
+                            </button>
+                        </div>
+                        <div class="right-btn">
+                            <button mat-button mat-dialog-close type="button">{{'buttons.close' | transloco |
+                                uppercase}}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </mat-tab>
+
+</mat-tab-group>

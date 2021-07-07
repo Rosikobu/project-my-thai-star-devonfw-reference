@@ -1,0 +1,23 @@
+<div class="btn-toolbar dialog-header">
+    <div>
+        <h4 class="left-btn">
+            <mat-icon matSuffix><span class="material-icons-sharp">
+                    error_outline
+                </span>
+            </mat-icon> {{'buttons.deleteUser' | transloco}}
+        </h4>
+    </div>
+</div>
+<div class="dialog-body"> {{'userManagement.userManagement.confirmText1' | transloco}}    {{UserInfo.username}} {{'userManagement.userManagement.confirmText2' | transloco}}</div>
+<div class="btn-toolbar">
+    <div class="right-btn">
+        <button mat-stroked-button mat-dialog-close color="warn" (click)="deleteUser()">
+            <mat-icon matSuffix><span class="material-icons-sharp">
+                    person_remove
+                </span></mat-icon>
+                {{'buttons.deleteUser' | transloco}}
+        </button>
+        <button mat-button mat-dialog-close>{{'buttons.close' | transloco |
+            uppercase}}</button>
+    </div>
+</div>

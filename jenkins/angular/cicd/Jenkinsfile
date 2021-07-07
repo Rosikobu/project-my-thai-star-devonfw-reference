@@ -1,0 +1,184 @@
+pipeline{
+    agent any
+
+    options {
+        buildDiscarder(logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '1', daysToKeepStr: '5', numToKeepStr: '50'))
+        // Disable concurrent builds. It will wait until the pipeline finish before start a new one
+        disableConcurrentBuilds()
+    }
+
+    tools {
+        nodejs "NodeJS 12.16.1"
+    }
+
+    environment {
+        // Script for build the application. Defined at package.json
+        buildScript = 'build --configuration=docker'
+        // Script for lint the application. Defined at package.json
+        lintScript = 'lint'
+        // Script for test the application. Defined at package.json
+        testScript = 'test:ci'
+        // Angular directory
+        angularDir = 'angular'
+        // SRC folder. It will be angularDir/srcDir
+        srcDir = 'src'
+        // Name of the custom tool for chrome stable
+        chrome = 'Chrome-stable'
+
+        // sonarQube
+        // Name of the sonarQube tool
+        sonarTool = 'SonarQube'
+        // Name of the sonarQube environment
+        sonarEnv = "SonarQube"
+
+        // Nexus
+        // Artifact groupId
+        groupId = 'com.devonfw.mythaistar'
+        // Nexus repository ID
+        repositoryId = 'pl-nexus'
+        // Nexus internal URL
+        repositoryUrl = 'http://nexus3-core:8081/nexus3/repository/maven-snapshots'
+        // Maven global settings configuration ID
+        globalSettingsId = 'MavenSettings'
+        // Maven tool id
+        mavenInstallation = 'Maven3'
+
+        // Docker
+        dockerRegistryCredentials = 'nexus-api'
+        dockerRegistryProtocol = 'https://'
+        dockerTool = 'docker-global'
+    }
+
+    stages {
+        stage ('Loading Custom Tools') {
+            steps {
+                tool chrome
+                tool dockerTool
+            }
+        }
+
+        stage ('Fresh Dependency Installation') {
+            steps {
+                dir(angularDir){
+                    sh "sed -i s_https://registry.yarnpkg.com_http://nexus3-core:8081/nexus3/repository/npm_g yarn.lock"
+                    sh "yarn"
+                }
+            }
+        }
+
+        stage ('Code Linting') {
+            steps {
+                dir(angularDir) {
+                    sh """yarn ${lintScript}"""
+                }
+            }
+        }
+
+        stage ('Execute Angular tests') {
+            steps {
+                dir(angularDir) {
+                    sh """yarn ${testScript}"""
+                }
+            }
+        }
+
+        stage ('Check dependencies') {
+            steps {
+                script {
+                    dir(angularDir) {
+                        try {
+                            sh "yarn audit"
+                        } catch(e) {
+                            println "There are vulnerabilities, please update your dependencies."
+                        }
+                    }
+                }
+            }
+        }
+
+        stage ('SonarQube code analysis') {
+            steps {
+                script {
+                    dir(angularDir) {
+                        def scannerHome = tool sonarTool
+                        def props = readJSON file: 'package.json'
+                        withSonarQubeEnv(sonarEnv) {
+                            sh """
+                                ${scannerHome}/bin/sonar-scanner \
+                                    -Dsonar.projectKey=${props.name} \
+                                    -Dsonar.projectName=${props.name} \
+                                    -Dsonar.projectVersion=${props.version} \
+                                    -Dsonar.sources=${srcDir}
+                            """
+                        }
+                        timeout(time: 1, unit: 'HOURS') {
+                            def qg = waitForQualityGate() 
+                            if (qg.status != 'OK') {
+                                error "Pipeline aborted due to quality gate failure: ${qg.status}"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        stage ('Build Application') {
+            steps {
+                dir(angularDir) {
+                    sh """yarn ${buildScript}"""
+                }
+            }
+        }
+
+        stage ('Deliver application into Nexus') {
+            steps {
+                script {
+                    dir(angularDir) {
+                        def props = readJSON file: 'package.json'
+                        sh """rm -f ${props.name}.zip"""
+                        zip dir: 'dist/', zipFile: """${props.name}.zip"""
+                        withMaven(globalMavenSettingsConfig: globalSettingsId, maven: mavenInstallation) {
+                            sh """
+                                mvn deploy:deploy-file \
+                                    -DgroupId=${groupId} \
+                                    -DartifactId=${props.name} \
+                                    -Dversion=${props.version}-SNAPSHOT \
+                                    -Dpackaging=zip \
+                                    -Dfile=${props.name}.zip \
+                                    -DrepositoryId=${repositoryId} \
+                                    -Durl=${repositoryUrl}
+                            """
+                        }
+                    }
+                }
+            }
+        }
+
+        stage ('Create the Docker image') {
+            steps {
+                script {
+                    def props
+                    // Get the Pl Url
+                    def PL_URL = JENKINS_URL.replace("https://", "").split("/")[0]
+                    dir(angularDir) {
+                        props = readJSON file: 'package.json'
+                        sh "cp -r dist ../reverse-proxy/angular/dist"
+                    }
+                    dir('reverse-proxy/angular') {
+                        docker.withRegistry("""${dockerRegistryProtocol}docker-registry-${PL_URL}""", dockerRegistryCredentials) {
+                            def customImage = docker.build("my-thai-star/angular:${props.version}")
+                            customImage.push()
+                            customImage.push("latest");
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}

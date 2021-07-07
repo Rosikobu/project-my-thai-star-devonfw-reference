@@ -1,0 +1,85 @@
+pipeline{
+    agent any
+
+    options {
+        buildDiscarder(logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '1', daysToKeepStr: '5', numToKeepStr: '50'))
+        // Disable concurrent builds. It will wait until the pipeline finish before start a new one
+        disableConcurrentBuilds()
+    }
+
+    environment {
+        dockerTool = 'docker-global'
+        dockerImage = 'my-thai-star/reverse-proxy'
+        containerNetworkAlias = 'reverse-proxy'
+    }
+
+    parameters {
+        string(name: 'registryUrl', defaultValue: "REPLACE_ME", description: 'docker registry url')
+        credentials(name: 'registryCredentialsId', defaultValue: "nexus-api", description: 'registry credentials', credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl')
+        booleanParam(name: 'buildReverseProxy', defaultValue: false, description: 'Build again the reverse proxy image?')
+        string(name: 'port', defaultValue: '8081', description: 'Reverse proxy exposed port', trim: true)
+        string(name: 'dockerNetwork', defaultValue: 'my-thai-star', description: 'The docker network for the deployed container') 
+    }
+
+    stages {
+        stage ('Load custom tools'){
+            steps {
+                tool 'docker-global'
+            }
+        }
+        stage ('Create docker network') {
+            steps {
+                script {
+                    tool dockerTool
+
+                    def network = sh returnStdout: true, script: """docker network ls -f name="^${params.dockerNetwork}\$" | sed '2q;d' """
+                    if (network?.trim() == '') {
+                        sh "docker network create ${params.dockerNetwork}"
+                    } else {
+                        println "${params.dockerNetwork} network already exists"
+                    }
+                }
+            }
+        }
+
+        stage ('Create the Docker image') {
+            when {
+                equals expected: true, actual: params.buildReverseProxy
+            }
+            steps {
+                script {
+                    dir('reverse-proxy') {
+                        docker.withRegistry("""${params.registryUrl}""", params.registryCredentialsId) {
+                            def customImage = docker.build("${dockerImage}:latest")
+                            customImage.push()
+                        }
+                    }
+                }
+            }
+        }
+        
+        stage('Deploy new image') {
+            steps {
+                script {
+                    // TODO: Change this with the pipeline docker syntax
+                    docker.withRegistry("""${params.registryUrl}""", params.registryCredentialsId) {
+                        docker.image("${dockerImage}:latest").pull()
+
+                        def containerId = sh returnStdout: true, script: """docker ps -aqf network=${params.dockerNetwork} -f "ancestor=${params.registryUrl.replace("https://", "")}/${dockerImage}:${params.VERSION}" """
+                        if (containerId?.trim()) {
+                            sh "docker rm -f ${containerId.trim()}"
+                        }
+
+                        sh """docker run -d -p ${params.port}:80 --network=${params.dockerNetwork} --network-alias="${containerNetworkAlias}" ${params.registryUrl.replace("https://", "")}/${dockerImage}:latest"""
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}
