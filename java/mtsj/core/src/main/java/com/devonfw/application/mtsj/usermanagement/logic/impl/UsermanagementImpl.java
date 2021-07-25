@@ -292,9 +292,9 @@ public class UsermanagementImpl extends AbstractComponentFacade implements Userm
 		UserEntity userEntity = getBeanMapper().map(user, UserEntity.class);
 
 		// validate email if already exists
-		if (userDao.findByEmail(userEntity.getEmail()) != null) {
-			throw new EntityExistsException("Email already exists - cant use email twice.");
-		}
+//		if (userDao.findByEmail(userEntity.getEmail()) != null) {
+//			throw new EntityExistsException("Email already exists - cant use email twice.");
+//		}
 
 		// save entity
 		UserEntity resultEntity = getUserDao().save(userEntity);
