@@ -36,3 +36,6 @@ hs_err_pid*
 java/mtsj/.vscode/
 node-old/
 node-bak/
+
+mochaChaiJS/node_modules/
+mochaChaiJS/package-lock.json

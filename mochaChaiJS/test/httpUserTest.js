@@ -91,4 +91,9 @@ describe('User-API', () => {
 https://www.chaijs.com/plugins/chai-http/
 https://www.chaijs.com/api/assert/
 
+
+npm init
+npm install mocha chai --save-dev
+npm install chai-http
+npm run test
 */
